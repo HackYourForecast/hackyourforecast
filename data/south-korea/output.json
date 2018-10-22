@@ -1,0 +1,1764 @@
+[
+  {
+    "location": {
+      "name": "Sokcho",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 16.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 58,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Bukchuncheon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 0.8,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1023.2,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Cheorwon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.5,
+        "cloudsPercent": 0,
+        "humidityPercent": 23,
+        "windSpeedMps": 1.7,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Dongducheon",
+      "lat": 37.93965,
+      "lng": 127.06178
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.4,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 2.6,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1024.1,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Paju",
+      "lat": 58.33545,
+      "lng": 26.3169
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 31,
+        "windSpeedMps": 1.6,
+        "windDirectionDeg": 202.5,
+        "pressureHPA": 1024.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Daegwallyeong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 12.6,
+        "cloudsPercent": 0,
+        "humidityPercent": 67,
+        "windSpeedMps": 3.8,
+        "windDirectionDeg": 67.5,
+        "pressureHPA": 1022.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Baengnyeongdo",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 15.7,
+        "cloudsPercent": 60,
+        "humidityPercent": 67,
+        "windSpeedMps": 4.4,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1023.8,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Bukgangneung",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17,
+        "cloudsPercent": 0,
+        "humidityPercent": 52,
+        "windSpeedMps": 1.2,
+        "windDirectionDeg": 22.5,
+        "pressureHPA": 1023.8,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gangneung",
+      "lat": 37.75587,
+      "lng": 128.89615
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.3,
+        "cloudsPercent": 0,
+        "humidityPercent": 52,
+        "windSpeedMps": 1.6,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Donghae",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 16.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 66,
+        "windSpeedMps": 1.3,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Seoul",
+      "lat": 37.566,
+      "lng": 126.9784
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.9,
+        "cloudsPercent": 10,
+        "humidityPercent": 20,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1023.8,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Incheon",
+      "lat": 37.45646,
+      "lng": 126.70515
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.9,
+        "cloudsPercent": 20,
+        "humidityPercent": 36,
+        "windSpeedMps": 3.4,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1024,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Wonju",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.7,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 1.7,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1023.2,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Ulleungdo",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 16.8,
+        "cloudsPercent": 0,
+        "humidityPercent": 49,
+        "windSpeedMps": 1.4,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.7,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Suwon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.7,
+        "cloudsPercent": 10,
+        "humidityPercent": 30,
+        "windSpeedMps": 2.6,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1024.1,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yeongwol",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.3,
+        "cloudsPercent": 0,
+        "humidityPercent": 28,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1022.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Chungju",
+      "lat": 36.97604,
+      "lng": 127.94024
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.2,
+        "cloudsPercent": 0,
+        "humidityPercent": 27,
+        "windSpeedMps": 0.7,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1023.7,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Seosan",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.9,
+        "cloudsPercent": 30,
+        "humidityPercent": 50,
+        "windSpeedMps": 3.6,
+        "windDirectionDeg": 0,
+        "pressureHPA": 1024.3,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Uljin",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.3,
+        "cloudsPercent": 0,
+        "humidityPercent": 49,
+        "windSpeedMps": 1.2,
+        "windDirectionDeg": 112.5,
+        "pressureHPA": 1024.2,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Cheongju",
+      "lat": 36.6439,
+      "lng": 127.5012
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.5,
+        "cloudsPercent": 10,
+        "humidityPercent": 20,
+        "windSpeedMps": 1.6,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Daejeon",
+      "lat": 36.32139,
+      "lng": 127.41972
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.3,
+        "cloudsPercent": 10,
+        "humidityPercent": 31,
+        "windSpeedMps": 1.3,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1024,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Chupungnyeong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 20,
+        "windSpeedMps": 2.8,
+        "windDirectionDeg": 202.5,
+        "pressureHPA": 1023.1,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Andong",
+      "lat": 36.56592,
+      "lng": 128.725
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 1.2,
+        "windDirectionDeg": 337.5,
+        "pressureHPA": 1023.3,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Sangju",
+      "lat": 36.41558,
+      "lng": 128.15862
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 0.7,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Pohang",
+      "lat": 36.03222,
+      "lng": 129.365
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.6,
+        "cloudsPercent": 0,
+        "humidityPercent": 37,
+        "windSpeedMps": 1.8,
+        "windDirectionDeg": 22.5,
+        "pressureHPA": 1024.3,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gunsan",
+      "lat": 35.98177,
+      "lng": 126.71602
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.4,
+        "cloudsPercent": 30,
+        "humidityPercent": 50,
+        "windSpeedMps": 3.4,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1024,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Daegu",
+      "lat": 35.87028,
+      "lng": 128.59111
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.6,
+        "cloudsPercent": 10,
+        "humidityPercent": 23,
+        "windSpeedMps": 1.8,
+        "windDirectionDeg": 135,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jeonju",
+      "lat": 35.82194,
+      "lng": 127.14889
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.1,
+        "cloudsPercent": 20,
+        "humidityPercent": 43,
+        "windSpeedMps": 2.3,
+        "windDirectionDeg": 337.5,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Ulsan",
+      "lat": 35.53722,
+      "lng": 129.31667
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18,
+        "cloudsPercent": 10,
+        "humidityPercent": 47,
+        "windSpeedMps": 2.4,
+        "windDirectionDeg": 90,
+        "pressureHPA": 1023.8,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Changwon",
+      "lat": 35.22806,
+      "lng": 128.68111
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.6,
+        "cloudsPercent": 10,
+        "humidityPercent": 48,
+        "windSpeedMps": 2.5,
+        "windDirectionDeg": 112.5,
+        "pressureHPA": 1023.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gwangju",
+      "lat": 35.15472,
+      "lng": 126.91556
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540026000,
+        "temperatureC": 20.5,
+        "cloudsPercent": 70,
+        "humidityPercent": 24,
+        "windSpeedMps": 0.4,
+        "pressureHPA": 1023.6,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Busan",
+      "lat": 35.10278,
+      "lng": 129.04028
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.5,
+        "cloudsPercent": 10,
+        "humidityPercent": 52,
+        "windSpeedMps": 1.4,
+        "windDirectionDeg": 90,
+        "pressureHPA": 1023.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Tongyeong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.8,
+        "cloudsPercent": 20,
+        "humidityPercent": 32,
+        "windSpeedMps": 2.5,
+        "windDirectionDeg": 337.5,
+        "pressureHPA": 1023.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Mokpo",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.1,
+        "cloudsPercent": 60,
+        "humidityPercent": 47,
+        "windSpeedMps": 2.9,
+        "windDirectionDeg": 0,
+        "pressureHPA": 1024.3,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yeosu",
+      "lat": 34.73824,
+      "lng": 127.74147
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.8,
+        "cloudsPercent": 60,
+        "humidityPercent": 35,
+        "windSpeedMps": 1.4,
+        "windDirectionDeg": 157.5,
+        "pressureHPA": 1023.5,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Heuksando",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 16.1,
+        "cloudsPercent": 50,
+        "humidityPercent": 71,
+        "windSpeedMps": 3.7,
+        "windDirectionDeg": 0,
+        "pressureHPA": 1024.4,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Wando",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.9,
+        "cloudsPercent": 60,
+        "humidityPercent": 48,
+        "windSpeedMps": 2.3,
+        "windDirectionDeg": 135,
+        "pressureHPA": 1023.9,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gochang",
+      "lat": 35.40844,
+      "lng": 126.55761
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18,
+        "cloudsPercent": 70,
+        "humidityPercent": 49,
+        "windSpeedMps": 4.7,
+        "windDirectionDeg": 315,
+        "pressureHPA": 1024.1,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Suncheon",
+      "lat": 34.94793,
+      "lng": 127.48604
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19,
+        "cloudsPercent": 70,
+        "humidityPercent": 41,
+        "windSpeedMps": 1.9,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1022.8,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Hongseong",
+      "lat": 36.59394,
+      "lng": 126.66864
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.4,
+        "cloudsPercent": 40,
+        "humidityPercent": 38,
+        "windSpeedMps": 1.3,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.7,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jeju",
+      "lat": 33.51014,
+      "lng": 126.52193
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.3,
+        "cloudsPercent": 70,
+        "humidityPercent": 48,
+        "windSpeedMps": 3.1,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1024.2,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gosan",
+      "lat": 33.30006,
+      "lng": 126.18814
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.7,
+        "cloudsPercent": 40,
+        "humidityPercent": 67,
+        "windSpeedMps": 4.9,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.6,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Seongsan",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.2,
+        "cloudsPercent": 60,
+        "humidityPercent": 51,
+        "windSpeedMps": 3.3,
+        "windDirectionDeg": 90,
+        "pressureHPA": 1024.2,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Seogwipo",
+      "lat": 33.26131,
+      "lng": 126.61884
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19,
+        "cloudsPercent": 60,
+        "humidityPercent": 57,
+        "windSpeedMps": 1.5,
+        "windDirectionDeg": 67.5,
+        "pressureHPA": 1023.2,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jinju",
+      "lat": 35.19219,
+      "lng": 128.083
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.6,
+        "cloudsPercent": 40,
+        "humidityPercent": 33,
+        "windSpeedMps": 0.7,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1023.8,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Ganghwa",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.6,
+        "cloudsPercent": 0,
+        "humidityPercent": 44,
+        "windSpeedMps": 2.9,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1024.7,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yangpyeong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.8,
+        "cloudsPercent": 0,
+        "humidityPercent": 31,
+        "windSpeedMps": 1.8,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.6,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Icheon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20,
+        "cloudsPercent": 0,
+        "humidityPercent": 30,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 202.5,
+        "pressureHPA": 1024,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Inje",
+      "lat": 38.06525,
+      "lng": 128.17412
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 33,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1023,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Hongcheon",
+      "lat": 37.6878,
+      "lng": 127.88853
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20,
+        "cloudsPercent": 0,
+        "humidityPercent": 24,
+        "windSpeedMps": 1.8,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1023,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Taebaek",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 15.5,
+        "cloudsPercent": 0,
+        "humidityPercent": 38,
+        "windSpeedMps": 3.2,
+        "windDirectionDeg": 67.5,
+        "pressureHPA": 1021.6,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jeongseon Gun",
+      "lat": 37.37161,
+      "lng": 128.65994
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 14.6,
+        "cloudsPercent": 0,
+        "humidityPercent": 46,
+        "windSpeedMps": 1.3,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1023.1,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jecheon",
+      "lat": 37.13887,
+      "lng": 128.22134
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 29,
+        "windSpeedMps": 2.5,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1022.3,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Boeun",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.8,
+        "cloudsPercent": 0,
+        "humidityPercent": 29,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 202.5,
+        "pressureHPA": 1023.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Cheonan",
+      "lat": 36.80931,
+      "lng": 127.16004
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.5,
+        "cloudsPercent": 0,
+        "humidityPercent": 30,
+        "windSpeedMps": 1.5,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1023.6,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Boryeong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.8,
+        "cloudsPercent": 0,
+        "humidityPercent": 53,
+        "windSpeedMps": 0.5,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Buyeo",
+      "lat": 36.27995,
+      "lng": 126.90936
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 21,
+        "windSpeedMps": 0.9,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1023.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Geumsan",
+      "lat": 36.0955,
+      "lng": 127.48392
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20,
+        "cloudsPercent": 0,
+        "humidityPercent": 27,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 270,
+        "pressureHPA": 1023.3,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Buan",
+      "lat": 35.71914,
+      "lng": 126.72928
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 17.7,
+        "cloudsPercent": 40,
+        "humidityPercent": 48,
+        "windSpeedMps": 2.7,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1024.3,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Imsil",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.9,
+        "cloudsPercent": 20,
+        "humidityPercent": 27,
+        "windSpeedMps": 1.7,
+        "windDirectionDeg": 292.5,
+        "pressureHPA": 1022.9,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jeongeup",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.9,
+        "cloudsPercent": 40,
+        "humidityPercent": 41,
+        "windSpeedMps": 1.7,
+        "windDirectionDeg": 22.5,
+        "pressureHPA": 1023.7,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Namwon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.1,
+        "cloudsPercent": 50,
+        "humidityPercent": 28,
+        "windSpeedMps": 1.4,
+        "windDirectionDeg": 157.5,
+        "pressureHPA": 1023.1,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jangsu",
+      "lat": 35.64244,
+      "lng": 127.521
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.8,
+        "cloudsPercent": 20,
+        "humidityPercent": 34,
+        "windSpeedMps": 2.9,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1022,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gochanggun",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.5,
+        "cloudsPercent": 60,
+        "humidityPercent": 35,
+        "windSpeedMps": 2.2,
+        "windDirectionDeg": 337.5,
+        "pressureHPA": 1023.4,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Bukchangwon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19,
+        "cloudsPercent": 0,
+        "humidityPercent": 39,
+        "windSpeedMps": 1.9,
+        "windDirectionDeg": 315,
+        "pressureHPA": 1023.3,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gangjin Gun",
+      "lat": 34.62455,
+      "lng": 126.76534
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.5,
+        "cloudsPercent": 40,
+        "humidityPercent": 39,
+        "windSpeedMps": 3.9,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1024.2,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jangheung",
+      "lat": 34.66656,
+      "lng": 126.88455
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.2,
+        "cloudsPercent": 60,
+        "humidityPercent": 40,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 157.5,
+        "pressureHPA": 1023.5,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Haenam",
+      "lat": 34.56186,
+      "lng": 126.59908
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.3,
+        "cloudsPercent": 70,
+        "humidityPercent": 43,
+        "windSpeedMps": 2.6,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1024,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Goheung",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.4,
+        "cloudsPercent": 60,
+        "humidityPercent": 39,
+        "windSpeedMps": 1.5,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.4,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Jindogun",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.5,
+        "cloudsPercent": 60,
+        "humidityPercent": 44,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 315,
+        "pressureHPA": 1023.5,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Bongwhoa",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.2,
+        "cloudsPercent": 0,
+        "humidityPercent": 31,
+        "windSpeedMps": 2.1,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1022.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yeongju",
+      "lat": 36.82297,
+      "lng": 128.63303
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.7,
+        "cloudsPercent": 0,
+        "humidityPercent": 31,
+        "windSpeedMps": 2.6,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1022.8,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Mungyeong",
+      "lat": 36.73722,
+      "lng": 128.11034
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.6,
+        "cloudsPercent": 0,
+        "humidityPercent": 25,
+        "windSpeedMps": 1.4,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1023.5,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yeongdeok",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.4,
+        "cloudsPercent": 0,
+        "humidityPercent": 33,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 157.5,
+        "pressureHPA": 1024,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Uiseong",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.4,
+        "cloudsPercent": 0,
+        "humidityPercent": 24,
+        "windSpeedMps": 1.2,
+        "windDirectionDeg": 225,
+        "pressureHPA": 1023.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Gumi",
+      "lat": 36.12372,
+      "lng": 128.37613
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19,
+        "cloudsPercent": 0,
+        "humidityPercent": 36,
+        "windSpeedMps": 0.6,
+        "windDirectionDeg": 180,
+        "pressureHPA": 1023.7,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Yeongcheon",
+      "lat": 35.95806,
+      "lng": 128.93571
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20,
+        "cloudsPercent": 0,
+        "humidityPercent": 28,
+        "windSpeedMps": 1.3,
+        "windDirectionDeg": 112.5,
+        "pressureHPA": 1023.4,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "GyeongJu",
+      "lat": 35.84276,
+      "lng": 129.21169
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 26,
+        "windSpeedMps": 1.6,
+        "windDirectionDeg": 45,
+        "pressureHPA": 1023.8,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Geochang",
+      "lat": 35.68195,
+      "lng": 127.901
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.1,
+        "cloudsPercent": 0,
+        "humidityPercent": 34,
+        "windSpeedMps": 2.5,
+        "windDirectionDeg": 135,
+        "pressureHPA": 1021.6,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Hapcheon",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 20.8,
+        "cloudsPercent": 0,
+        "humidityPercent": 19,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 90,
+        "pressureHPA": 1023.6,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Miryang",
+      "lat": 35.49003,
+      "lng": 128.74384
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540026000,
+        "temperatureC": 20.9,
+        "cloudsPercent": 0,
+        "humidityPercent": 26,
+        "windSpeedMps": 0.4,
+        "pressureHPA": 1023.2,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Sancheong",
+      "lat": 35.40711,
+      "lng": 127.87728
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.6,
+        "cloudsPercent": 10,
+        "humidityPercent": 36,
+        "windSpeedMps": 1.6,
+        "windDirectionDeg": 202.5,
+        "pressureHPA": 1023.1,
+        "symbol": "Sunny"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Geoje",
+      "lat": 37.56829,
+      "lng": 126.99778
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 18.5,
+        "cloudsPercent": 40,
+        "humidityPercent": 44,
+        "windSpeedMps": 1.5,
+        "windDirectionDeg": 157.5,
+        "pressureHPA": 1024,
+        "symbol": "Partly Cloudy"
+      }
+    ]
+  },
+  {
+    "location": {
+      "name": "Namhae",
+      "lat": 34.82472,
+      "lng": 127.90472
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540018800,
+        "fromHour": 1540018800,
+        "toHour": 1540022400,
+        "temperatureC": 19.3,
+        "cloudsPercent": 60,
+        "humidityPercent": 39,
+        "windSpeedMps": 1.1,
+        "windDirectionDeg": 247.5,
+        "pressureHPA": 1023.9,
+        "symbol": "Most Cloudy"
+      }
+    ]
+  }
+]
