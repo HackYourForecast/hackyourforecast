@@ -17,7 +17,7 @@ app.use(morgan('short'));
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "****",
+  password: "amir",
   database: "weather",
   multipleStatements: true,
   debug: false
@@ -48,26 +48,40 @@ app.post('/api/weather', (req, res) => {
   connection.query(queryGeo3, queryCoords, (err, rows) => {
     if (err) {
       console.log("Failed fetching the file " + err);
+    }
+    if (rows.length === 0) {
+      res.send("We dont have any information with the data you entered.");
+      res.end()
+      return
+    } else if (rows.length === 1) {
+      res.json(rows)
+      res.end()
+      return
     } else {
       console.log("Fetched successfully");
 
       // Set the items for each query to sort
       let sortItems = [];
-      for (let i = 0; i < rows.length; i++) {
+      for (let i = 0; i < coords.length; i++) {
         for (let j = i; j < i + 1; j++) {
-          const point = rows[i];
+          let point;
+          if (coords.length === 1) {
+            point = rows;
+           } else {
+            point = rows[i];
+          }
           const opts = { yName: "lat", xName: "lng" };
           const origin = { lat: coords[j].lat, lng: coords[j].lng };
           const arr = sortByDistance(origin, point, opts)[0];
           sortItems.push(arr);
         }
       }
-      res.json({ 'result': sortItems, })
+      res.json({ 'result': sortItems })
     }
-  });
+  })
 });
 
-// res.send("We dont have any information with the data you entered.");
+
 
 // weather api for all weather infos
 app.get('/api/weather/', (req, res) => {
