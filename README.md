@@ -2,9 +2,9 @@
 
 #Weather symbol we use:
 + clear sky: 0,
-+ rainy: 1,
++ rain: 1,
 + drizzel: 2,
-+ cloudy: 3,
++ cloud: 3,
 + fog: 4,
 + sleet: 5,
-+ snowy: 6
++ snow: 6
