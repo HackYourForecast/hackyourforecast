@@ -1,0 +1,28 @@
+{
+  "name": "hackyourforecast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourForecast/hackyourforecast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HackYourForecast/hackyourforecast/issues"
+  },
+  "homepage": "https://github.com/HackYourForecast/hackyourforecast#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "latlon-geohash": "^1.1.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "sort-by-distance": "^1.0.1"
+  }
+}
