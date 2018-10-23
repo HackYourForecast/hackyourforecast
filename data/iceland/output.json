@@ -1,0 +1,682 @@
+[
+  {
+    "location": {
+      "lat": 64.145981,
+      "lng": -21.942238
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Overcast",
+        "temperatureC": 8,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 202.5,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Rain showers",
+        "temperatureC": 6,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Rain showers",
+        "temperatureC": 5,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 135,
+        "rainPrecipitationMm": 4
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 135,
+        "rainPrecipitationMm": 3
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Light rain",
+        "temperatureC": 6,
+        "windSpeedMps": 5,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 65.074258,
+      "lng": -22.730295
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Light rain",
+        "temperatureC": 8,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Light rain",
+        "temperatureC": 6,
+        "windSpeedMps": 8,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Rain showers",
+        "temperatureC": 5,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Overcast",
+        "temperatureC": 5,
+        "windSpeedMps": 6,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Overcast",
+        "temperatureC": 3,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 135,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 6,
+        "windSpeedMps": 8,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 66.15755,
+      "lng": -23.250727
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "",
+        "temperatureC": 5,
+        "windSpeedMps": 5,
+        "windDirectionDeg": 90,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 135,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Cloudy",
+        "temperatureC": 1,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Overcast",
+        "temperatureC": 3,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Overcast",
+        "temperatureC": -1,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 65.688492,
+      "lng": -18.126169
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 157.5,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Cloudy",
+        "temperatureC": 6,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Overcast",
+        "temperatureC": 3,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Overcast",
+        "temperatureC": 2,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Overcast",
+        "temperatureC": 1,
+        "windSpeedMps": 0,
+        "windDirectionDeg": 45,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 7,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 65.262041,
+      "lng": -14.403526
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Rain",
+        "temperatureC": 4,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 22.5,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Clear sky",
+        "temperatureC": 10,
+        "windSpeedMps": 5,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Partly cloudy",
+        "temperatureC": 4,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 135,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Overcast",
+        "temperatureC": 2,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 270,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Cloudy",
+        "temperatureC": 10,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 64.253265,
+      "lng": -15.208044
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "",
+        "temperatureC": 1,
+        "windSpeedMps": 5,
+        "windDirectionDeg": 337.5,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Cloudy",
+        "temperatureC": 8,
+        "windSpeedMps": 12,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Partly cloudy",
+        "temperatureC": 5,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Overcast",
+        "temperatureC": 5,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 90,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Cloudy",
+        "temperatureC": 7,
+        "windSpeedMps": 5,
+        "windDirectionDeg": 270,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 63.417909,
+      "lng": -19.001245
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 7,
+        "windDirectionDeg": 45,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Rain showers",
+        "temperatureC": 6,
+        "windSpeedMps": 8,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Cloudy",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 0,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 315,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 8,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 63.999769,
+      "lng": -22.556537
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "Overcast",
+        "temperatureC": 7,
+        "windSpeedMps": 13,
+        "windDirectionDeg": 202.5,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Rain showers",
+        "temperatureC": 7,
+        "windSpeedMps": 12,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Rain showers",
+        "temperatureC": 5,
+        "windSpeedMps": 9,
+        "windDirectionDeg": 270,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 6,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 3
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Light rain",
+        "temperatureC": 4,
+        "windSpeedMps": 3,
+        "windDirectionDeg": 90,
+        "rainPrecipitationMm": 3
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 6,
+        "windSpeedMps": 9,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 63.440101,
+      "lng": -20.27859
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "",
+        "temperatureC": 8,
+        "windSpeedMps": 14,
+        "windDirectionDeg": 202.5,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Rain showers",
+        "temperatureC": 7,
+        "windSpeedMps": 13,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Rain showers",
+        "temperatureC": 5,
+        "windSpeedMps": 10,
+        "windDirectionDeg": 270,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 8,
+        "windSpeedMps": 10,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 4
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Rain",
+        "temperatureC": 5,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 45,
+        "rainPrecipitationMm": 5
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Light rain",
+        "temperatureC": 8,
+        "windSpeedMps": 9,
+        "windDirectionDeg": 270,
+        "rainPrecipitationMm": 1
+      }
+    ]
+  },
+  {
+    "location": {
+      "lat": 63.793065,
+      "lng": -18.041859
+    },
+    "weather": [
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1539993600,
+        "toHour": 1540080000,
+        "symbol": "",
+        "temperatureC": 8,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 180,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540080000,
+        "toHour": 1540166400,
+        "symbol": "Rain showers",
+        "temperatureC": 6,
+        "windSpeedMps": 8,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540166400,
+        "toHour": 1540252800,
+        "symbol": "Cloudy",
+        "temperatureC": 4,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540252800,
+        "toHour": 1540339200,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 1,
+        "windDirectionDeg": 0,
+        "rainPrecipitationMm": 2
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540339200,
+        "toHour": 1540425600,
+        "symbol": "Light rain",
+        "temperatureC": 3,
+        "windSpeedMps": 2,
+        "windDirectionDeg": 315,
+        "rainPrecipitationMm": 1
+      },
+      {
+        "updatedTimestamp": 1540012699,
+        "fromHour": 1540425600,
+        "toHour": 1540512000,
+        "symbol": "Overcast",
+        "temperatureC": 8,
+        "windSpeedMps": 4,
+        "windDirectionDeg": 225,
+        "rainPrecipitationMm": 0
+      }
+    ]
+  }
+]
