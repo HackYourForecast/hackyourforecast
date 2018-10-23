@@ -55,7 +55,7 @@ dbConnection.connect(function (err) {
                         console.error(`input of ${filePATH} is not valid!`);
                         return
                     } else {
-                        console.log("else", locationElement.location);
+                        // console.log("else", locationElement.location);
                         const geohash3 = geohash.encode(locationElement.location.lat, locationElement.location.lng, 3);
                         const geohash5 = geohash.encode(locationElement.location.lat, locationElement.location.lng, 5);
                         const lat = +locationElement.location.lat.toFixed(2);
