@@ -37,7 +37,7 @@ const getWeatherData = async (url, chunkSize, pausing) => {
     errorHandler(responseCoordinates, "responseCoordinates", 1);
     const coordinatesCities = await responseCoordinates.json();
     console.error(`fetching ${coordinatesCities.coordinates.length} cities`);
-    
+
     //filtering coordinates that are inside the polygon
     const testedInBoundaries = coordinatesCities.coordinates.filter(city => {
       return geolib.isPointInside(
@@ -55,7 +55,7 @@ const getWeatherData = async (url, chunkSize, pausing) => {
       const forecastResults = await Promise.all(
         slicedCoordinates.map(async (testedCoordinates, index) => {
           // pausing before making each fetch
-          sleep.sleep(pausing); 
+          sleep.sleep(pausing);
           const result = await fetch(`${baseURL}/geotype/point/lon/${Math.floor(testedCoordinates[0] * 1000000) / 1000000}/lat/${Math.floor(testedCoordinates[1] * 1000000) / 1000000}/data.json`);
           errorHandler(result, "response forecast result", i + index);
 
@@ -64,8 +64,8 @@ const getWeatherData = async (url, chunkSize, pausing) => {
           if (parsedResult.geometry.coordinates !== undefined) {
             return parsedResult;
           }
-            return [
-              {
+          return [
+            {
               approvedTime: undefined,
               referenceTime: undefined,
               geometry: {
@@ -125,16 +125,16 @@ const getWeatherData = async (url, chunkSize, pausing) => {
       });
       // filtering undefined results
       results.forEach(result => {
-        if (result.location !== undefined){
+        if (result.location !== undefined) {
           finalResults.push(result);
-          
-          fs.writeFileSync('smhi.json', JSON.stringify(finalResults, null, 2));
+
+          // fs.writeFileSync('smhi.json', JSON.stringify(finalResults, null, 2));
         }
       });
     }
-  
+
     console.log(JSON.stringify(finalResults, null, 2));
-    
+
   } catch (error) {
     console.error(error);
   }
@@ -146,7 +146,7 @@ const getWeatherData = async (url, chunkSize, pausing) => {
  */
 const errorHandler = (response, dataName, number) => {
   if (response.status !== 200) {
-    console.error( `Error: ${response.status} - ${response.statusText} fetching ${dataName}` );
+    console.error(`Error: ${response.status} - ${response.statusText} fetching ${dataName}`);
     return undefined;
   }
   console.error(`Success ${dataName} ${number}`);
@@ -160,99 +160,99 @@ const extractParameter = (result, param) => {
   if (result.parameters.length > 0) {
     for (let i = 0; i < result.parameters.length; i++) {
       if (result.parameters[i].name === param) {
-      if (param === "tcc_mean" || param === "lcc_mean" || param === "mcc_mean" || param === "hcc_mean") {
-        //converting octas to percentage
-        result.parameters[i].values[0] = result.parameters[i].values[0] * 12.5;
-      } else if (param === "Wsymb2") {
-        switch (result.parameters[i].values[0]) {
-          case 1:
-            result.parameters[i].values[0] = "Clear sky";
-            break;
-          case 2:
-            result.parameters[i].values[0] = "Nearly clear sky";
-            break;
-          case 3:
-            result.parameters[i].values[0] = "Variable cloudiness";
-            break;
-          case 4:
-            result.parameters[i].values[0] = "Halfclear sky";
-            break;
-          case 5:
-            result.parameters[i].values[0] = "Cloudy sky";
-            break;
-          case 6:
-            result.parameters[i].values[0] = "Overcast";
-            break;
-          case 7:
-            result.parameters[i].values[0] = "Fog";
-            break;
-          case 8:
-            result.parameters[i].values[0] = "Light rain showers";
-            break;
-          case 9:
-            result.parameters[i].values[0] = "Moderate rain showers";
-            break;
-          case 10:
-            result.parameters[i].values[0] = "Heavy rain showers";
-            break;
-          case 11:
-            result.parameters[i].values[0] = "Thunderstorm";
-            break;
-          case 12:
-            result.parameters[i].values[0] = "Light sleet showers";
-            break;
-          case 13:
-            result.parameters[i].values[0] = "Moderate sleet showers";
-            break;
-          case 14:
-            result.parameters[i].values[0] = "Heavy sleet showers";
-            break;
-          case 15:
-            result.parameters[i].values[0] = "Light snow showers";
-            break;
-          case 16:
-            result.parameters[i].values[0] = "Moderate snow showers";
-            break;
-          case 17:
-            result.parameters[i].values[0] = "Heavy snow showers";
-            break;
-          case 18:
-            result.parameters[i].values[0] = "Light rain";
-            break;
-          case 19:
-            result.parameters[i].values[0] = "Moderate rain";
-            break;
-          case 20:
-            result.parameters[i].values[0] = "Heavy rain";
-            break;
-          case 21:
-            result.parameters[i].values[0] = "Thunder";
-            break;
-          case 22:
-            result.parameters[i].values[0] = "Light sleet";
-            break;
-          case 23:
-            result.parameters[i].values[0] = "Moderate sleet";
-            break;
-          case 24:
-            result.parameters[i].values[0] = "Heavy sleet";
-            break;
-          case 25:
-            result.parameters[i].values[0] = "Light snowfall";
-            break;
-          case 26:
-            result.parameters[i].values[0] = "Moderate snowfall";
-            break;
-          case 27:
-            result.parameters[i].values[0] = "Heavy snowfall";
-            break;
+        if (param === "tcc_mean" || param === "lcc_mean" || param === "mcc_mean" || param === "hcc_mean") {
+          //converting octas to percentage
+          result.parameters[i].values[0] = result.parameters[i].values[0] * 12.5;
+        } else if (param === "Wsymb2") {
+          switch (result.parameters[i].values[0]) {
+            case 1:
+              result.parameters[i].values[0] = "Clear sky";
+              break;
+            case 2:
+              result.parameters[i].values[0] = "Nearly clear sky";
+              break;
+            case 3:
+              result.parameters[i].values[0] = "Variable cloudiness";
+              break;
+            case 4:
+              result.parameters[i].values[0] = "Halfclear sky";
+              break;
+            case 5:
+              result.parameters[i].values[0] = "Cloudy sky";
+              break;
+            case 6:
+              result.parameters[i].values[0] = "Overcast";
+              break;
+            case 7:
+              result.parameters[i].values[0] = "Fog";
+              break;
+            case 8:
+              result.parameters[i].values[0] = "Light rain showers";
+              break;
+            case 9:
+              result.parameters[i].values[0] = "Moderate rain showers";
+              break;
+            case 10:
+              result.parameters[i].values[0] = "Heavy rain showers";
+              break;
+            case 11:
+              result.parameters[i].values[0] = "Thunderstorm";
+              break;
+            case 12:
+              result.parameters[i].values[0] = "Light sleet showers";
+              break;
+            case 13:
+              result.parameters[i].values[0] = "Moderate sleet showers";
+              break;
+            case 14:
+              result.parameters[i].values[0] = "Heavy sleet showers";
+              break;
+            case 15:
+              result.parameters[i].values[0] = "Light snow showers";
+              break;
+            case 16:
+              result.parameters[i].values[0] = "Moderate snow showers";
+              break;
+            case 17:
+              result.parameters[i].values[0] = "Heavy snow showers";
+              break;
+            case 18:
+              result.parameters[i].values[0] = "Light rain";
+              break;
+            case 19:
+              result.parameters[i].values[0] = "Moderate rain";
+              break;
+            case 20:
+              result.parameters[i].values[0] = "Heavy rain";
+              break;
+            case 21:
+              result.parameters[i].values[0] = "Thunder";
+              break;
+            case 22:
+              result.parameters[i].values[0] = "Light sleet";
+              break;
+            case 23:
+              result.parameters[i].values[0] = "Moderate sleet";
+              break;
+            case 24:
+              result.parameters[i].values[0] = "Heavy sleet";
+              break;
+            case 25:
+              result.parameters[i].values[0] = "Light snowfall";
+              break;
+            case 26:
+              result.parameters[i].values[0] = "Moderate snowfall";
+              break;
+            case 27:
+              result.parameters[i].values[0] = "Heavy snowfall";
+              break;
+          }
         }
+        return result.parameters[i].values[0];
       }
-      return result.parameters[i].values[0];
     }
   }
-}
-return undefined;
+  return undefined;
 }
 
 getWeatherData(coordinatesURL, 5, 2);
