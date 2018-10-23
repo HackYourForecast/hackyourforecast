@@ -1,12 +1,13 @@
 const Express = require("express");
-const app = Express();
 const mysql = require('mysql');
 const morgan = require('morgan');
 const geoHash = require('latlon-geohash');
 const sortByDistance = require("sort-by-distance");
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 
+
+const app = Express();
 app.use(Express.json());
 app.use(bodyParser.urlencoded({
   extended: true
@@ -40,12 +41,13 @@ app.post('/api/weather', (req, res) => {
   for (let i = 0; i < coords.length; i++) {
     queryGeo3 += queryPattern;
     const geoHash3 = geoHash.encode((coords[i].lat), (coords[i].lng), 3)
-    const time = coords[i].timestamp;
+    let time = parseInt(coords[i].timestamp / 3600) * 3600;
     queryCoords.push(geoHash3, time)
   }
 
   //query from database
   connection.query(queryGeo3, queryCoords, (err, rows) => {
+
     if (err) {
       console.log("Failed fetching the file " + err);
     }
@@ -53,11 +55,8 @@ app.post('/api/weather', (req, res) => {
       res.send("We dont have any information with the data you entered.");
       res.end()
       return
-    } else if (rows.length === 1) {
-      res.json(rows)
-      res.end()
-      return
-    } else {
+    }
+     else {
       console.log("Fetched successfully");
 
       // Set the items for each query to sort
@@ -67,36 +66,26 @@ app.post('/api/weather', (req, res) => {
           let point;
           if (coords.length === 1) {
             point = rows;
-           } else {
+          } else {
             point = rows[i];
           }
           const opts = { yName: "lat", xName: "lng" };
           const origin = { lat: coords[j].lat, lng: coords[j].lng };
-          const arr = sortByDistance(origin, point, opts)[0];
-          sortItems.push(arr);
+          const object = sortByDistance(origin, point, opts)[0];
+          const structured = splitObj(object)
+          sortItems.push(structured);
         }
       }
       res.json({ 'result': sortItems })
     }
+    function splitObj(obj) {
+      return ({
+        "weather": { "geohash5": obj.geohash5, "geohash3": obj.geohash3, "sourceApi": obj.sourceApi, "symbol": obj.symbol, "fromHour": obj.fromHour, "altitude": obj.altitude, "fogPercent": obj.fogPercent, "pressureHPA": obj.pressureHPA, "cloudinessPercent": obj.cloudinessPercent, "windDirectionDeg": obj.windDirectionDeg, "dewpointTemperatureC": obj.dewpointTemperatureC, "windGustMps": obj.windGustMps, "humidityPercent": obj.humidityPercent, "areaMaxWindSpeedMps": obj.areaMaxWindSpeedMps, "windSpeedMps": obj.windSpeedMps, "temperatureC": obj.temperatureC, "lowCloudsPercent": obj.lowCloudsPercent, "mediumCloudsPercent": obj.mediumCloudsPercent, "highCloudsPercent": obj.highCloudsPercent, "temperatureProbability": obj.temperatureProbability, "windProbability": obj.windProbability, "updatedTimestamp": obj.updatedTimestamp }, "location": { "lat": obj.lat, "lng": obj.lng, "fromHour": obj.fromHour, "distance": obj.distance }
+      })
+    };
   })
 });
 
-
-
-// weather api for all weather infos
-app.get('/api/weather/', (req, res) => {
-  const queryString = `SELECT * FROM weather`;
-  connection.query(queryString, (err, rows, flieds) => {
-    if (err) {
-      console.log("Failed fetching the file" + err);
-      res.status(500);
-      res.end();
-      return;
-    }
-    console.log("Fetched successfully");
-    res.json(rows);
-  })
-});
 
 app.get('/api/weather/license', (req, res) => {
   const licenses = {

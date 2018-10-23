@@ -1,0 +1,227 @@
+{
+  "result": [
+    {
+      "weather": {
+        "geohash5": "r7kcf",
+        "geohash3": "r7k",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 6.4,
+        "fogPercent": null,
+        "pressureHPA": 1017,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 17.4,
+        "windGustMps": 1.944,
+        "humidityPercent": 99,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 2,
+        "temperatureC": 18,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -26.39,
+        "lng": 153.04,
+        "fromHour": 1539969000,
+        "distance": 0.11180339887498472
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "r3dw2",
+        "geohash3": "r3d",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 665.2,
+        "fogPercent": null,
+        "pressureHPA": 0,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 7.7,
+        "windGustMps": 0,
+        "humidityPercent": 80,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 0,
+        "temperatureC": 11,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -35.43,
+        "lng": 149.78,
+        "fromHour": 1539969000,
+        "distance": 0.5742821606144425
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "r1pjz",
+        "geohash3": "r1p",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 12.69,
+        "fogPercent": null,
+        "pressureHPA": 0,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 9,
+        "windGustMps": 7.222,
+        "humidityPercent": 77,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 6,
+        "temperatureC": 13,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -38.36,
+        "lng": 145.18,
+        "fromHour": 1539969000,
+        "distance": 0
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "r228s",
+        "geohash3": "r22",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 55,
+        "fogPercent": null,
+        "pressureHPA": 1003,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 9.5,
+        "windGustMps": 4.167,
+        "humidityPercent": 65,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 3,
+        "temperatureC": 16,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -43.49,
+        "lng": 147.15,
+        "fromHour": 1539969000,
+        "distance": 0
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "qvv16",
+        "geohash3": "qvv",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 30.4,
+        "fogPercent": null,
+        "pressureHPA": 1011,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 24.3,
+        "windGustMps": 2.5,
+        "humidityPercent": 84,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 2,
+        "temperatureC": 27,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -12.42,
+        "lng": 130.89,
+        "fromHour": 1539969000,
+        "distance": 0.11999999999999922
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "qd673",
+        "geohash3": "qd6",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539969000,
+        "altitude": 10,
+        "fogPercent": null,
+        "pressureHPA": 0,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": null,
+        "windGustMps": 4.722,
+        "humidityPercent": 0,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 4,
+        "temperatureC": 0,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -31.76,
+        "lng": 115.73,
+        "fromHour": 1539969000,
+        "distance": 0.1523154621172796
+      }
+    },
+    {
+      "weather": {
+        "geohash5": "r1dtc",
+        "geohash3": "r1d",
+        "sourceApi": "Australia",
+        "symbol": null,
+        "fromHour": 1539894600,
+        "altitude": 8,
+        "fogPercent": null,
+        "pressureHPA": 0,
+        "cloudinessPercent": null,
+        "windDirectionDeg": null,
+        "dewpointTemperatureC": 9.5,
+        "windGustMps": null,
+        "humidityPercent": 70,
+        "areaMaxWindSpeedMps": null,
+        "windSpeedMps": 1,
+        "temperatureC": 15,
+        "lowCloudsPercent": null,
+        "mediumCloudsPercent": null,
+        "highCloudsPercent": null,
+        "temperatureProbability": null,
+        "windProbability": null,
+        "updatedTimestamp": 1539976824
+      },
+      "location": {
+        "lat": -35.55,
+        "lng": 138.6,
+        "fromHour": 1539894600
+      }
+    }
+  ]
+}
