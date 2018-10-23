@@ -38,7 +38,7 @@ dbConnection.connect(function (err) {
         } else {
             const data = JSON.parse(fs.readFileSync(filePATH, 'utf8'));
             if (data.length !== 0) {
-                const sourceApi = file.split('.')[0];
+                const sourceApi = file.split('.')[0].toLowerCase();;
 
                 const sql =
                     'REPLACE INTO weather (geohash5, geohash3, lat, sourceApi, lng, symbol, fromHour, altitude,\
