@@ -19,7 +19,7 @@ const weatherSymbols = {
 
 function translateSymbol(symbol){
     if (symbol) {
-        for ( let i = 0; i < Object.keys(weatherSymbols); i++) {
+        for ( let i = 0; i < Object.keys(weatherSymbols).length; i++) {
             if (RegExp(Object.keys(weatherSymbols)[i], 'i').test(symbol)) {
                 return weatherSymbols[Object.keys[i]];
             }
