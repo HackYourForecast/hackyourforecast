@@ -38,7 +38,7 @@ dbConnection.connect(function (err) {
         } else {
             const data = JSON.parse(fs.readFileSync(filePATH, 'utf8'));
             if (data.length !== 0) {
-                const sourceApi = file.split('.')[0];
+                const sourceApi = file.split('.')[0].toLowerCase();;
 
                 const sql =
                     'REPLACE INTO weather (geohash5, geohash3, lat, sourceApi, lng, symbol, fromHour, altitude,\
@@ -51,11 +51,10 @@ dbConnection.connect(function (err) {
 
                 data.forEach(locationElement => {
                     //checking if the fetch output is in valid format
-                    if (locationElement.location === undefined && locationElement.weather === undefined) {
+                    if (locationElement.location === undefined || locationElement.weather === undefined) {
                         console.error(`input of ${filePATH} is not valid!`);
                         return
                     } else {
-                        console.log("else", locationElement.location);
                         const geohash3 = geohash.encode(locationElement.location.lat, locationElement.location.lng, 3);
                         const geohash5 = geohash.encode(locationElement.location.lat, locationElement.location.lng, 5);
                         const lat = +locationElement.location.lat.toFixed(2);

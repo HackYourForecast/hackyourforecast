@@ -38,12 +38,15 @@ async function tempDiff(hourTimestamp) {
         const orderedLocations = geolib.orderByDistance(
           { latitude: monitoredCity.lat, longitude: monitoredCity.lng }, locationsArray);
 
-        const closestIndex = orderedLocations[0].key;
+        const closestValue = orderedLocations[0].distance;
 
-        citiesDiff.push({
-          sourceApi: sameGeohash3Cities[closestIndex].sourceApi,
-          tempDiff: monitoredCity.temperatureC - sameGeohash3Cities[closestIndex].temperatureC
-        });
+        orderedLocations.filter(elem => elem.distance === closestValue).forEach(elem =>
+          citiesDiff.push({
+            sourceApi: sameGeohash3Cities[elem.key].sourceApi,
+            tempDiff: monitoredCity.temperatureC - sameGeohash3Cities[elem.key].temperatureC
+          })
+        );
+
       }
 
     }
@@ -51,14 +54,14 @@ async function tempDiff(hourTimestamp) {
     let diffArray = SOURCE_APIS.map(source => {
       let citiesCount = 0;
       const sumOfTempDiff = citiesDiff.reduce((acc, elem) => {
-        if (elem.sourceApi === source) {
+        if (elem.sourceApi === source.toLowerCase()) {
           citiesCount++
           return acc + elem.tempDiff
         }
         return acc
       }, 0);
       return {
-        sourceApi: source,
+        sourceApi: source.toLowerCase(),
         sumOfTempDiff,
         citiesCount
       };
