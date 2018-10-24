@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const geoHash = require('latlon-geohash');
 const sortByDistance = require("sort-by-distance");
 const bodyParser = require('body-parser');
-
+const config = require('./config/config')
 
 
 const app = Express();
@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({
 app.use(morgan('short'));
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "amir",
-  database: "weather",
+  host: config.DB_CONFIG.host,
+  user: config.DB_CONFIG.user,
+  password: config.DB_CONFIG.password,
+  database: config.DB_CONFIG.database,
   multipleStatements: true,
   debug: false
 });
@@ -31,6 +31,7 @@ connection.connect(function (err) {
   console.log("Connected");
 });
 
+const port = 5002;
 
 app.post('/api/weather', (req, res) => {
   const coords = req.body.locations;
@@ -41,7 +42,7 @@ app.post('/api/weather', (req, res) => {
   for (let i = 0; i < coords.length; i++) {
     queryGeo3 += queryPattern;
     const geoHash3 = geoHash.encode((coords[i].lat), (coords[i].lng), 3)
-    let time = parseInt(coords[i].timestamp / 3600) * 3600;
+    const time = parseInt(coords[i].timestamp / 3600) * 3600;
     queryCoords.push(geoHash3, time)
   }
 
@@ -72,6 +73,9 @@ app.post('/api/weather', (req, res) => {
           const opts = { yName: "lat", xName: "lng" };
           const origin = { lat: coords[j].lat, lng: coords[j].lng };
           const object = sortByDistance(origin, point, opts)[0];
+          if (object.distance === undefined) {
+            object.distance = 0
+          }
           const structured = splitObj(object)
           sortItems.push(structured);
         }
@@ -79,9 +83,13 @@ app.post('/api/weather', (req, res) => {
       res.json({ 'result': sortItems })
     }
     function splitObj(obj) {
-      return ({
-        "weather": { "geohash5": obj.geohash5, "geohash3": obj.geohash3, "sourceApi": obj.sourceApi, "symbol": obj.symbol, "fromHour": obj.fromHour, "altitude": obj.altitude, "fogPercent": obj.fogPercent, "pressureHPA": obj.pressureHPA, "cloudinessPercent": obj.cloudinessPercent, "windDirectionDeg": obj.windDirectionDeg, "dewpointTemperatureC": obj.dewpointTemperatureC, "windGustMps": obj.windGustMps, "humidityPercent": obj.humidityPercent, "areaMaxWindSpeedMps": obj.areaMaxWindSpeedMps, "windSpeedMps": obj.windSpeedMps, "temperatureC": obj.temperatureC, "lowCloudsPercent": obj.lowCloudsPercent, "mediumCloudsPercent": obj.mediumCloudsPercent, "highCloudsPercent": obj.highCloudsPercent, "temperatureProbability": obj.temperatureProbability, "windProbability": obj.windProbability, "updatedTimestamp": obj.updatedTimestamp }, "location": { "lat": obj.lat, "lng": obj.lng, "fromHour": obj.fromHour, "distance": obj.distance }
-      })
+      try {
+        return ({
+          "weather": { "geohash5": obj.geohash5, "geohash3": obj.geohash3, "sourceApi": obj.sourceApi, "symbol": obj.symbol, "fromHour": obj.fromHour, "altitude": obj.altitude, "fogPercent": obj.fogPercent, "pressureHPA": obj.pressureHPA, "cloudinessPercent": obj.cloudinessPercent, "windDirectionDeg": obj.windDirectionDeg, "dewpointTemperatureC": obj.dewpointTemperatureC, "windGustMps": obj.windGustMps, "humidityPercent": obj.humidityPercent, "areaMaxWindSpeedMps": obj.areaMaxWindSpeedMps, "windSpeedMps": obj.windSpeedMps, "temperatureC": obj.temperatureC, "lowCloudsPercent": obj.lowCloudsPercent, "mediumCloudsPercent": obj.mediumCloudsPercent, "highCloudsPercent": obj.highCloudsPercent, "temperatureProbability": obj.temperatureProbability, "windProbability": obj.windProbability, "updatedTimestamp": obj.updatedTimestamp }, "location": { "lat": obj.lat, "lng": obj.lng, "fromHour": obj.fromHour, "distance": obj.distance }
+        })
+      } catch (e) {
+        console.error(e.message);
+      }
     };
   })
 });
@@ -105,7 +113,7 @@ app.get('/api/weather/license', (req, res) => {
   res.send(licenses);
 });
 
-app.listen(5002, () => console.log('Listening on port 5002'));
+app.listen(port, () => console.log('Listening on port 5002'));
 
 
 
