@@ -1,18 +1,20 @@
 const config = {};
 
-config.TODO_DIR_PATH = "./tmp/todo"; // define the path where output will be saved
-config.ARCHIVE_DIR_PATH = "./tmp/archive"; //define the path where output will be archived
-config.SOURCE_APIS = ['rmi_belgium', 'netherlands', 'iceland', 'usa', 'metOfficeUK', 'australia',
-  'rmi_europe', 'poland', 'slovenia', 'southKorea', 'smhi'];
+config.TODO_DIR_PATH = "../tmp/todo"; // define the path where output will be saved
+config.ARCHIVE_DIR_PATH = "../tmp/archive"; //define the path where output will be archived
+config.SOURCE_APIS = ['rmi_Belgium', 'Netherlands', 'Iceland', 'USA', 'metOfficeUK', 'Australia',
+  'rmi_Europe', 'Poland', 'Slovenia', 'SouthKorea', 'SMHI', 'rmi_World'];
 config.DB_CONFIG = {
   host: 'localhost',
   user: 'root',
-  password: 'root2018',
-  database: 'smhi_db'
+  // password: 'root2018',
+  // database: 'smhi_db'
+  password: 'password',
+  database: 'weather'
 }
-config.STATS_API_PORT = 3000;
+config.STATS_API_PORT = 5000;
 config.QUERY_CHUNK_SIZE = 500;
-config.SLEEP_IN_SECOND = 2;
+config.SLEEP_IN_SECOND = 1;
 config.USA_API_USERAGENT =
   "freeWeatherapi/v1.0 (http://freeweatherapi.com; nevine.atike@gmail.com)";
 
