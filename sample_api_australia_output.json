@@ -220,7 +220,8 @@
       "location": {
         "lat": -35.55,
         "lng": 138.6,
-        "fromHour": 1539894600
+        "fromHour": 1539894600,
+        "distance" : 0
       }
     }
   ]
