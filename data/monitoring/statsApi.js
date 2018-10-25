@@ -22,6 +22,14 @@ const getTotalSql =
 const getAllSql =
   'SELECT * FROM stats ORDER BY runTimestamp DESC';
 
+app.get('/api/stats/list', (req, res, next) => {
+
+  if (SOURCE_APIS)
+    res.json({ sources: SOURCE_APIS });
+  else next(new Error('Error getting sources list...'));
+
+});
+
 app.get('/api/stats/total', (req, res, next) => {
   getStats(dbPool, getTotalSql, 'total')
     .then(results => res.json(results))
