@@ -23,7 +23,7 @@ async function main() {
     for (let i = 0; i < SOURCE_APIS.length; i++) {
       const result = await dbConnection.query(sql, [SOURCE_APIS[i], hourTimestamp]);
       if (result.length > 0)
-        await insertStats(dbConnection, SOURCE_APIS[i].toLowerCase(), hourTimestamp, result[0]);
+        await insertStats(dbConnection, SOURCE_APIS[i].toLowerCase(), runTimestamp, result[0]);
     }
 
   }
@@ -31,19 +31,19 @@ async function main() {
     console.log(error)
   } finally {
     dbConnection.end();
-    tempDiff(hourTimestamp);
+    tempDiff(hourTimestamp, runTimestamp);
   }
 
 }
 
-function insertStats(connection, sourceApi, hourTimestamp, sourceData) {
+function insertStats(connection, sourceApi, runTimestamp, sourceData) {
 
   const insertSql = 'REPLACE INTO stats (runTimeStamp, sourceApi, countOfItems ,sumOfTempC, sumOfWindMps,\
      sumOfPressureHPA, lastUpdateTimestamp) values (?,?,?,?,?,?,?)';
 
   const insertValues = (sourceData.count === 0) ?
-    [hourTimestamp, sourceApi, sourceData.count, 0, 0, 0, 0] :
-    [hourTimestamp, sourceApi, sourceData.count, sourceData['SUM(temperatureC)'], +sourceData['SUM(windSpeedMps)'],
+    [runTimestamp, sourceApi, sourceData.count, 0, 0, 0, 0] :
+    [runTimestamp, sourceApi, sourceData.count, sourceData['SUM(temperatureC)'], +sourceData['SUM(windSpeedMps)'],
       sourceData['SUM(pressureHPA)'], sourceData['MAX(updatedTimestamp)']];
 
   connection.query(insertSql, insertValues,

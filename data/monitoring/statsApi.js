@@ -2,8 +2,8 @@ const Express = require('express');
 const mysql = require('mysql');
 const { promisify } = require('util');
 
-const { STATS_API_PORT, SOURCE_APIS, DB_CONFIG } = require('../../config/config');
-
+const { SOURCE_APIS, DB_CONFIG } = require('../../config/config');
+const port = process.env.PORT || 5000;
 const app = Express();
 const dbPool = mysql.createPool({
   connectionLimit: 10,
@@ -38,7 +38,7 @@ app.get('/api/stats/total', (req, res, next) => {
 
 app.get('/api/stats/:sourceApi', (req, res, next) => {
   const sourceApi = req.params.sourceApi.toLowerCase();
-  if (SOURCE_APIS.find((elem) => elem == sourceApi)) {
+  if (SOURCE_APIS.find((elem) => elem.toLowerCase() == sourceApi)) {
     getStats(dbPool, getSourceSql, sourceApi)
       .then(results => res.json(results))
       .catch(err => next(err))
@@ -52,7 +52,7 @@ app.get('/api/stats/', (req, res, next) => {
     .then(results => {
       groupedResult = {};
       SOURCE_APIS.forEach((source) => {
-        groupedResult[source] = results.filter((result) => result.sourceApi === source);
+        groupedResult[source] = results.filter((result) => result.sourceApi === source.toLowerCase());
       });
       res.json(groupedResult)
     })
@@ -64,7 +64,7 @@ app.use((error, req, res, next) => {
   res.status(500).json({ response: error.message });
 });
 
-app.listen(STATS_API_PORT, () => console.log(`Listening on port ${STATS_API_PORT}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
 async function getStats(dbPool, sql, source) {
 

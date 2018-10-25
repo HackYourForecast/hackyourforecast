@@ -8,7 +8,7 @@ const { DB_CONFIG, SOURCE_APIS } = require('../../config/config');
 
 const citiesDiff = [];
 
-async function tempDiff(hourTimestamp) {
+async function tempDiff(hourTimestamp, runTimestamp) {
 
   let dbConnection;
   try {
@@ -66,7 +66,7 @@ async function tempDiff(hourTimestamp) {
         citiesCount
       };
     });
-    insertTempDiff(dbConnection, hourTimestamp, diffArray);
+    insertTempDiff(dbConnection, runTimestamp, diffArray);
 
   }
   catch (error) {
