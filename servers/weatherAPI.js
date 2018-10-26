@@ -32,7 +32,7 @@ connection.connect(function(err) {
   console.log("Connected");
 });
 
-//const port = 5002;
+// const port = 5002;
 
 app.post("/api/weather", (req, res) => {
   const coords = req.body.locations;
@@ -72,11 +72,16 @@ app.post("/api/weather", (req, res) => {
           const opts = { yName: "lat", xName: "lng" };
           const origin = { lat: coords[j].lat, lng: coords[j].lng };
           const object = sortByDistance(origin, point, opts)[0];
-          if (object.distance === undefined) {
+          if (object === undefined) {
+            sortItems.push({ 'Data not found for this location' : origin})
+          }else if (object.distance === undefined) {
             object.distance = 0;
+            const structured = splitObj(object);
+            sortItems.push(structured);
+          } else {
+            const structured = splitObj(object);
+            sortItems.push(structured);
           }
-          const structured = splitObj(object);
-          sortItems.push(structured);
         }
       }
       res.json({ result: sortItems });
@@ -85,34 +90,34 @@ app.post("/api/weather", (req, res) => {
       try {
         return {
           weather: {
-            geohash5: obj.geohash5,
-            geohash3: obj.geohash3,
-            sourceApi: obj.sourceApi,
-            symbol: obj.symbol,
-            fromHour: obj.fromHour,
-            altitude: obj.altitude,
-            fogPercent: obj.fogPercent,
-            pressureHPA: obj.pressureHPA,
-            cloudinessPercent: obj.cloudinessPercent,
-            windDirectionDeg: obj.windDirectionDeg,
-            dewpointTemperatureC: obj.dewpointTemperatureC,
-            windGustMps: obj.windGustMps,
-            humidityPercent: obj.humidityPercent,
-            areaMaxWindSpeedMps: obj.areaMaxWindSpeedMps,
-            windSpeedMps: obj.windSpeedMps,
-            temperatureC: obj.temperatureC,
-            lowCloudsPercent: obj.lowCloudsPercent,
-            mediumCloudsPercent: obj.mediumCloudsPercent,
-            highCloudsPercent: obj.highCloudsPercent,
-            temperatureProbability: obj.temperatureProbability,
-            windProbability: obj.windProbability,
-            updatedTimestamp: obj.updatedTimestamp
+            'geohash5': obj.geohash5,
+            'geohash3': obj.geohash3,
+            'sourceApi': obj.sourceApi,
+            'symbol': obj.symbol,
+            'fromHour': obj.fromHour,
+            'altitude': obj.altitude,
+            'fogPercent': obj.fogPercent,
+            'pressureHPA': obj.pressureHPA,
+            'cloudinessPercent': obj.cloudinessPercent,
+            'windDirectionDeg': obj.windDirectionDeg,
+            'dewpointTemperatureC': obj.dewpointTemperatureC,
+            'windGustMps': obj.windGustMps,
+            'humidityPercent': obj.humidityPercent,
+            'areaMaxWindSpeedMps': obj.areaMaxWindSpeedMps,
+            'windSpeedMps': obj.windSpeedMps,
+            'temperatureC': obj.temperatureC,
+            'lowCloudsPercent': obj.lowCloudsPercent,
+            'mediumCloudsPercent': obj.mediumCloudsPercent,
+            'highCloudsPercent': obj.highCloudsPercent,
+            'temperatureProbability': obj.temperatureProbability,
+            'windProbability': obj.windProbability,
+            'updatedTimestamp': obj.updatedTimestamp
           },
           location: {
-            lat: obj.lat,
-            lng: obj.lng,
-            fromHour: obj.fromHour,
-            distance: obj.distance
+            'lat': obj.lat,
+            'lng': obj.lng,
+            'fromHour': obj.fromHour,
+            'distance': obj.distance
           }
         };
       } catch (e) {
