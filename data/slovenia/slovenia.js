@@ -34,7 +34,7 @@ async function main() {
 
     await xmlToJson(slovenia, function(err, data) {
       if (err) {
-        return console.error(err);
+        return console.error(err, 'slovenia');
       }
 
       let xmlData = data.data.metData;
@@ -43,7 +43,7 @@ async function main() {
           StationName: arr.domain_longTitle.toString(),
           lat: parseFloat(arr.domain_lat.toString()),
           lng: parseFloat(arr.domain_lon.toString()),
-          altitude: parseFloat(arr.domain_altitude.toString())
+          alt: parseFloat(arr.domain_altitude.toString())
         };
       });
 
@@ -90,7 +90,7 @@ async function main() {
       console.log(JSON.stringify(array, null, 2));
     });
   } catch (error) {
-    console.error(error);
+    console.error(error, 'slovenia');
   }
 }
 main();

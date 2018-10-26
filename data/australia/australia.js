@@ -113,7 +113,7 @@ function getCityData(areaUrl) {
       }
       resolve(array);
     } catch (error) {
-      console.error(error);
+      console.error(error, 'australia');
       reject(error);
     }
   });

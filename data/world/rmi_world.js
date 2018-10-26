@@ -95,7 +95,7 @@ async function main() {
 
     console.log(JSON.stringify(array, null, 2));
   } catch (error) {
-    console.error(error);
+    console.error(error, 'rmi_world');
   }
 }
 main();

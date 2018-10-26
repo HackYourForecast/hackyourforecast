@@ -61,7 +61,7 @@ function getCityData(areaUrl) {
             }));
         }
         catch (error) {
-            console.error(error);
+            console.error(error, 'poland');
             reject(error);
         }
     });
