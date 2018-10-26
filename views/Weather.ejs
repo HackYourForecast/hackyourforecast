@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <% include  ./partials/head.ejs %>
+        <link rel="stylesheet" type="text/css" href="../public/css/weather.css">
+
+</head>
+
+
+
+<body>
+    <header>
+        <nav class="navbar">
+            <% include  ./partials/navigation.ejs %>
+        </nav>
+    </header>
+
+    <div class='forecast-container'>
+        <form action="/weather" method="post">
+            <input name="city" type="text" placeholder="Enter a City" required autocomplete="off">
+            <button>Get JSON </button>
+        </form>
+        <% if(typeof weather !== 'undefined'){ %>
+            <p id='city'>
+
+                <%= weather.city %>
+            </p>
+            <p id='temp'>
+                Temperature:
+                <%= weather.weatherText %> ℃
+            </p>
+            <p id='desc'>
+                Description:
+                <%= weather.description %>
+            </p>
+
+            <% } %>
+
+                <% if(typeof error !== 'undefined'){ %>
+                    <p>
+                        <%= error %>
+                    </p>
+                    <% } %>
+
+    </div>
+    <footer>
+        <% include  ./partials/footer.ejs %>
+
+    </footer>
+    <script src='./script/toogleManu.js' type='text/javascript'></script>
+
+</body>
+
+</html>

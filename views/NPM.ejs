@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include  ./partials/head.ejs %>
+        <link rel="stylesheet" type="text/css" href="../public/css/npm.css">
+
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar">
+            <% include  ./partials/navigation.ejs %>
+        </nav>
+    </header>
+
+
+    <div class='bg'> </div>
+    <section class='install-section'>
+        <h2>Installation and usage:</h2>
+        <p id='install-command'>npm install hack-your-forecast</p>
+        <code>
+            <pre>
+
+                <div class='example-code'>
+<span class='red'>const</span> <span class='blue'>hackYourForecast</span>=<span class='blue'>require</span> ("hack-your-forecast");
+
+<span class='red'>const</span> <span class='blue'>cities</span> = [
+  { lat: <span class='blue'>37.5681</span>, lng:<span class='blue'>126.998</span> , timestamp: <span class='blue'>1539268428</span> },
+  { lat:<span class='blue'>35.9581</span> , lng: <span class='blue'>128.936</span>, timestamp:<span class='red'>new</span> <span class='purple'>Date()</span>  },
+  { lat: <span class='blue' >37.569</span>, lng:<span class='blue'>126.983</span>  }
+  { lat: <span class='blue'>37.569</span>, lng:<span class='blue'>126.983</span>  }
+];
+
+hackYourForecast.<span class='purple'>lookup</span>(cities).<span class='blue'>then</span>(<snap class='purple'>console</snap>.log);
+<div class='json'>
+/* 
+   output type: JSON, output schema:
+
+                     [{
+    "result": {
+      [
+        {
+          "weather": {
+            "TemperatureC: 7.6,
+            "windSpeedMps: 0.3,
+            etc..
+          },
+          "location": {
+            "lat": 37.5683,
+            "lng": 126.998,
+            "fromHour": 1539268428,
+            "distance": 0.1735
+          }
+        },
+        etc..
+      ]
+    }
+  }]
+/*
+</div>
+</div>
+</pre>
+
+          </code>
+        </div>
+    </section>
+    <section class='contribution-section'>
+        <h2>How to contribute to NPM package</h2>
+
+        <p>1.Fork it and create your feature branch:
+            <span class='git-command'>git checkout -b my-new-feature</span>
+        </p>
+        <p>2.Commit your changes:
+            <span class='git-command'> git commit -am 'Added some feature'</span>
+        </p>
+        <p>3.Push to the branch:
+            <span class='git-command'> git push origin my-new-feature</span>
+        </p>
+        <p>4.Submit a pull request</p>
+
+
+    </section>
+
+    <footer>
+        <% include  ./partials/footer.ejs %>
+
+    </footer>
+
+    <script src='./script/toogleManu.js' type='text/javascript'></script>
+
+</body>
+
+</html>

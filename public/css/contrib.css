@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+a,
+i {
+  color: white;
+}
+#clicked {
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+}
+
+.bg {
+  background-image: url("photos-videos/github.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section p {
+  width: 50%;
+  margin-top: 20px;
+  text-align: left;
+}

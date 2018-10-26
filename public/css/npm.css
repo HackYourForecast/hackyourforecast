@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a,
+.navbar i {
+  color: white;
+}
+
+/* #clicked {
+  border-left: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+} */
+
+.bg {
+  background-image: url("photos-videos/npmBg.jpg");
+  min-height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section {
+  height: auto;
+  width: auto;
+  border: 1px solid rgba(168, 203, 214, 0.356);
+  padding: 30px;
+}
+
+.example-code {
+  width: auto;
+  background-color: rgba(194, 232, 243, 0.356);
+  padding: 20px;
+}
+
+.json {
+  color: grey;
+}
+
+.install-section {
+  margin-left: 5%;
+}
+
+#install-command {
+  font-weight: bold;
+  border: 1px solid rgba(168, 203, 214, 0.356);
+  background-color: rgba(218, 240, 247, 0.356);
+  width: 300px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.install-section h2 {
+  border-bottom: 1px solid rgba(168, 203, 214, 0.356);
+  margin: 5px;
+  padding: 10px;
+}
+
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.purple {
+  color: purple;
+}
+
+.contribution-section {
+  text-align: center;
+}
+
+.contribution-section p {
+  margin: 35px;
+}
+
+.git-command {
+  font-weight: bold;
+  border: 1px solid rgba(168, 203, 214, 0.356);
+  background-color: rgba(218, 240, 247, 0.356);
+  padding: 3px;
+}
+
+@media (max-width: 500px) {
+  .install-section {
+    font-size: 11px;
+    width: 420px;
+  }
+  .contribution-section p {
+    font-size: 10px;
+  }
+
+  .git-command {
+    font-weight: bold;
+    border: none;
+    background-color: rgba(218, 240, 247, 0.356);
+    padding: 3px;
+  }
+}

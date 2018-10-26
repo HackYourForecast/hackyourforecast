@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-top: 1px solid rgb(41, 41, 41);
+}
+
+footer i {
+  color: rgb(167, 167, 167);
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 1px 2px #494848;
+}
+
+.title-btn-container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  color: rgb(214, 212, 212);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+.btn {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/*big screen*/
+@media screen and (min-width: 1000px) {
+  nav a {
+    color: white;
+  }
+
+  .navbar ul,
+  h3 {
+    text-shadow: 2px 1px 3px rgb(0, 0, 0);
+    color: white;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  /* 
+  #clicked {
+    border-left: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+  } */
+
+  .btn {
+    font-weight: bold;
+    padding: 10px 30px;
+    background-color: white;
+    color: rgb(116, 114, 114);
+    box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    border-color: transparent;
+    background-color: rgba(0, 0, 0, 0.808);
+    transition: 0.3s;
+    transform: translate(3px, 4px);
+    color: white;
+  }
+  footer p {
+    color: white;
+    font-size: 13px;
+  }
+
+  nav li {
+    font-size: 19px;
+  }
+}
+
+/* small screen */
+@media screen and (max-width: 999px) {
+  video {
+    display: none;
+  }
+  body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+      url("./photos-videos/smallScreenBg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  nav a,
+  i {
+    color: white;
+  }
+  /* #clicked {
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+  } */
+
+  .btn {
+    background-color: darkorange;
+  }
+
+  .btn:hover {
+    border-color: transparent;
+    background-color: rgb(255, 255, 255);
+    color: rgb(180, 102, 6);
+    transition: all 0.2s ease-in;
+  }
+
+  footer p {
+    color: rgb(201, 200, 200);
+  }
+}

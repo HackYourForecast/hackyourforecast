@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include  ./partials/head.ejs %>
+        <link rel="stylesheet" type="text/css" href="../public/css/index.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <% include  ./partials/navigation.ejs %>
+        </nav>
+    </header>
+    <video autoplay loop muted>
+        <source src='../public/css/photos-videos/bgVideo.mp4' type='video/mp4 ' />
+    </video>
+    <div class='title-btn-container'>
+        <h3>Free weather API for Developers</h3>
+
+        <div class='button'>
+
+            <a href='/api' class=' btn'> Get Started </a>
+
+        </div>
+    </div>
+
+    <script src='./script/toogleManu.js' type='text/javascript'></script>
+
+    <footer>
+        <% include  ./partials/footer.ejs %>
+
+    </footer>
+</body>
+
+</html>
