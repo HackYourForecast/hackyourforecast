@@ -38,7 +38,7 @@ async function main() {
         ), []);
         cityObj.weather = cityWeather;
         usaWeather.push(cityObj);
-        console.error('Location (' + cityObj.location.lat + ',' + cityObj.location.lng + ') updated');
+        console.error('Location (' + cityObj.location.lat + ',' + cityObj.location.lng + ') updated, USA');
 
       }
       sleep.sleep(SLEEP_IN_SECOND);

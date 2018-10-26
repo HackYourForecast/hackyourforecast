@@ -33,7 +33,7 @@ function getCityData(areaUrl) {
             name: city,
             lat: cityCoords.lat,
             lng: cityCoords.lng,
-            altM: cityCoords.altM
+            alt: cityCoords.altM
           };
         });
 
@@ -113,7 +113,7 @@ function getCityData(areaUrl) {
       }
       resolve(array);
     } catch (error) {
-      console.error(error);
+      console.error(error, 'australia');
       reject(error);
     }
   });

@@ -36,7 +36,7 @@ const getWeatherData = async (url, chunkSize, pausing) => {
     const responseCoordinates = await fetch(url);
     errorHandler(responseCoordinates, "responseCoordinates", 1);
     const coordinatesCities = await responseCoordinates.json();
-    console.error(`fetching ${coordinatesCities.coordinates.length} cities`);
+    console.error(`fetching ${coordinatesCities.coordinates.length} cities from SMHI API`);
 
     //filtering coordinates that are inside the polygon
     const testedInBoundaries = coordinatesCities.coordinates.filter(city => {
