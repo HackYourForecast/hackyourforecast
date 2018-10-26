@@ -32,8 +32,6 @@ connection.connect(function(err) {
   console.log("Connected");
 });
 
-// const port = 5002;
-
 app.post("/api/weather", (req, res) => {
   const coords = req.body.locations;
   const queryPattern =
