@@ -33,7 +33,7 @@ function getCityData(areaUrl) {
             name: city,
             lat: cityCoords.lat,
             lng: cityCoords.lng,
-            altM: cityCoords.altM
+            alt: cityCoords.altM
           };
         });
 
