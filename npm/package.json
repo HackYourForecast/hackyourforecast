@@ -1,0 +1,24 @@
+{
+  "name": "hack-your-forecast",
+  "version": "1.0.1-1",
+  "description": "Open source weather API, Provided by https://www.HackYourForecast.com, powered by contributors ❤",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HackYourForecast/hackyourforecast.git"
+  },
+  "keywords": [
+    "weather",
+    "open source weather",
+    "opensource",
+    "temperature",
+    "wind",
+    "humidity",
+    "pressure"
+  ],
+  "author": "Open Source Factory",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
