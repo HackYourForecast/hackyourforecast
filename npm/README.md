@@ -1,8 +1,6 @@
 # hack-your-forecast
 ![npm bundle size (minified)](https://img.shields.io/HackYourForecast/min/hackyourforecast.svg)
 
-<!-- Hack Your Forecast is a part of *The Open Source Factory*, an open source organization providing reliable weather data from various open source data providors (see licences) -->
-
 Open source weather API, Provided by _https://www.HackYourForecast.com_, powered by contributors ❤
 
 ## installation and usage:
