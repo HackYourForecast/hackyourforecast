@@ -4,7 +4,7 @@
 <head>
 
     <% include  ./partials/head.ejs %>
-        <link rel="stylesheet" type="text/css" href="../public/css/weather.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/weather.css">
 
 </head>
 
@@ -19,33 +19,13 @@
 
     <div class='forecast-container'>
         <form action="/weather" method="post">
-            <input name="city" type="text" placeholder="Enter a City" required autocomplete="off">
-            <!-- <input name="longitude" type="text" placeholder="Enter a longitude" required autocomplete="on">
+            <!-- <input name="city" type="text" placeholder="Enter a City" required autocomplete="off"> -->
+            <input name="longitude" type="text" placeholder="Enter a longitude" required autocomplete="on">
             <input name="latitude" type="text" placeholder="Enter a latitude" required autocomplete="on">
-            <input name="timestamp" type="text" placeholder="Enter a timestamp" required autocomplete="on"> -->
+            <input name="timestamp" type="text" placeholder="Enter a timestamp" required autocomplete="on">
             <button>Get JSON </button>
         </form>
-        <% if(typeof weather !== 'undefined'){ %>
-            <p id='city'>
 
-                <%= weather.city %>
-            </p>
-            <p id='temp'>
-                Temperature:
-                <%= weather.weatherText %> ℃
-            </p>
-            <p id='desc'>
-                Description:
-                <%= weather.description %>
-            </p>
-
-            <% } %>
-
-                <% if(typeof error !== 'undefined'){ %>
-                    <p>
-                        <%= error %>
-                    </p>
-                    <% } %>
 
     </div>
     <footer>
