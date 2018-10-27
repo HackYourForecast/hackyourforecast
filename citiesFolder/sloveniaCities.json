@@ -1,0 +1,116 @@
+[
+  {
+    "StationName": "Celje",
+    "lat": 46.2447,
+    "lng": 15.2525,
+    "alt": 244
+  },
+  {
+    "StationName": "Cerklje Airport (at Krka river)",
+    "lat": 45.8936,
+    "lng": 15.525,
+    "alt": 154
+  },
+  {
+    "StationName": "Crnomelj",
+    "lat": 45.5603,
+    "lng": 15.1508,
+    "alt": 157
+  },
+  {
+    "StationName": "Katarina",
+    "lat": 46.0933,
+    "lng": 14.3756,
+    "alt": 660
+  },
+  {
+    "StationName": "Kocevje",
+    "lat": 45.6453,
+    "lng": 14.8542,
+    "alt": 467
+  },
+  {
+    "StationName": "Kredarica",
+    "lat": 46.3794,
+    "lng": 13.8539,
+    "alt": 2514
+  },
+  {
+    "StationName": "Lesce",
+    "lat": 46.37,
+    "lng": 14.18,
+    "alt": 515
+  },
+  {
+    "StationName": "Lisca",
+    "lat": 46.0681,
+    "lng": 15.2897,
+    "alt": 943
+  },
+  {
+    "StationName": "Ljubljana",
+    "lat": 46.0658,
+    "lng": 14.5172,
+    "alt": 299
+  },
+  {
+    "StationName": " Ljubljana Jože Pučnik Airport",
+    "lat": 46.2178,
+    "lng": 14.4775,
+    "alt": 364
+  },
+  {
+    "StationName": "Maribor Edvard Rusjan Airport",
+    "lat": 46.48,
+    "lng": 15.6869,
+    "alt": 264
+  },
+  {
+    "StationName": "Murska Sobota",
+    "lat": 46.6525,
+    "lng": 16.1961,
+    "alt": 188
+  },
+  {
+    "StationName": "Nova Gorica",
+    "lat": 45.8958,
+    "lng": 13.6289,
+    "alt": 55
+  },
+  {
+    "StationName": "Novo Mesto",
+    "lat": 45.8019,
+    "lng": 15.1822,
+    "alt": 220
+  },
+  {
+    "StationName": "Portorož Airport",
+    "lat": 45.4756,
+    "lng": 13.6206,
+    "alt": 2
+  },
+  {
+    "StationName": "Postojna",
+    "lat": 45.7664,
+    "lng": 14.1975,
+    "alt": 533
+  },
+  {
+    "StationName": "Ratece",
+    "lat": 46.4975,
+    "lng": 13.7175,
+    "alt": 864
+  },
+  {
+    "StationName": "Slovenj Gradec",
+    "lat": 46.49,
+    "lng": 15.1161,
+    "alt": 455
+  },
+  {
+    "StationName": "Vogel",
+    "lat": 46.2639,
+    "lng": 13.8456,
+    "alt": 1535
+  }
+]

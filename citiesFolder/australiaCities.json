@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Darwin Airport",
+    "lat": -12.42,
+    "lng": 130.89,
+    "alt": 30.4
+  },
+  {
+    "name": "Darwin Harbour",
+    "lat": -12.47,
+    "lng": 130.85,
+    "alt": 0
+  },
+  {
+    "name": "Batchelor",
+    "lat": -13.05,
+    "lng": 131.03,
+    "alt": 104
+  },
+  {
+    "name": "Black Point",
+    "lat": -11.15,
+    "lng": 132.14,
+    "alt": 5
+  },
+  {
+    "name": "Channel Point",
+    "lat": -13.17,
+    "lng": 130.12,
+    "alt": 3
+  },
+  {
+    "name": "Charles Point",
+    "lat": -12.39,
+    "lng": 130.63,
+    "alt": 14
+  },
+  null,
+  {
+    "name": "Middle Point",
+    "lat": -12.61,
+    "lng": 131.3,
+    "alt": 14.1
+  },
+  {
+    "name": "Noonamah",
+    "lat": -12.61,
+    "lng": 131.05,
+    "alt": 17.5
+  },
+  {
+    "name": "Point Fawcett",
+    "lat": -11.76,
+    "lng": 130.03,
+    "alt": 6.5
+  },
+  {
+    "name": "Point Stuart",
+    "lat": -12.24,
+    "lng": 131.88,
+    "alt": 1
+  }
+]

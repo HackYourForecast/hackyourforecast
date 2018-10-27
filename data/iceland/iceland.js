@@ -70,7 +70,7 @@ async function main() {
         console.log(JSON.stringify(citiesObj, null, 2));
 
     } catch (error) {
-        console.error(error.message);
+        console.error(error.message, 'iceland');
     }
 
 }

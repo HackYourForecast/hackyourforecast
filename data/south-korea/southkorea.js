@@ -70,7 +70,7 @@ const citiesAndCoords = require("../data.json");
             const { lat, lng } = cityDetails;
 
         } catch (e) {
-            console.error(`\n✗ ${e.message}\n`);
+            console.error(`\n✗ ${e.message} south-korea \n`);
         }
     });
 

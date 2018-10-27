@@ -65,7 +65,7 @@ requestWeatherData = (locations_id, update) => {
         if (response.statusCode === 200) {
             handleWeatherData(data, update);
         } else if (err) {
-            console.error(err);
+            console.error(err, 'UK');
         }
     });
     sleep(1000);
@@ -111,7 +111,7 @@ handleWeatherData = (data, update) => {
 
 curl.getJSON(UK_LastUpdated_URL, null, (err, response, update) => {
     if (err) {
-        throw (err);
+        throw (err, 'UK');
     }
     console.error(`Line 159:Weather data last update request statusCode ->${response.statusCode}`);
 
@@ -123,11 +123,11 @@ curl.getJSON(UK_LastUpdated_URL, null, (err, response, update) => {
             data.Locations.Location.sort((a, b) => b.latitude - a.latitude);
             for (let i = 0; i < data.Locations.Location.length; i += config.metOfficeUK_chunk) {
                 requestWeatherData(data.Locations.Location[i].id, update);
-                console.error("Line 172: Requesting weather data based on locations' id");
+                console.error("Line 172: Requesting weather data based on UK locations' id");
             }
 
         } else if (err) {
-            console.error(err);
+            console.error(err, 'UK');
         }
         console.log(JSON.stringify(fullWeatherDetails, null, 2));
         console.error("Line 179: Saved Weather output in 'UK-weatherOutput.json' file.");
