@@ -5,4 +5,4 @@ $(document).ready(function(e) {
     let $nav = $(".navbar");
     $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
   });
-})(jquery);
+});

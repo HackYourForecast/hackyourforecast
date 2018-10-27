@@ -42,10 +42,11 @@ map.on("click", onMapClick, { passive: true });
 
 function handleCities(data) {
   for (let prop in data) {
+    console.log(data[prop]);
     data[prop].map(city => {
-      const marker = new L.marker([city.lat, city.lng])
-        .bindPopup(city.name)
-        .addTo(map);
+      if (city.lat !== null && city.lng !== null) {
+        const marker = new L.marker([city.lat, city.lng]).addTo(map);
+      }
     });
   }
 }

@@ -4,6 +4,7 @@ const app = express();
 const request = require("request");
 const requireDir = require("require-dir");
 const cities = requireDir("../citiesFolder");
+
 const axios = require("axios");
 const { STATS_API_PORT, STATS_API_HOST } = require("../config/config");
 
@@ -61,32 +62,32 @@ app.post("/weather", (req, res) => {
   // let lat = req.body.latitude;
   // let timestamp = req.body.timestamp;
 
-   const city = req.body.city;
-   let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-   request(url, function(err, response, body) {
-     if (err) {
-       res.render("weather", {
-         weather: null,
-         error: "Error, please try again"
-       });
-     } else {
-       let weather = JSON.parse(body);
-       if (weather.main === undefined) {
-         res.render("weather", {
-           weather: null,
-           error: "Error, please try again"
-         });
-       } else {
-         let weatherText = weather.main.temp;
-         let city = weather.name;
-         let description = weather.weather[0].description;
-         res.render("weather", {
-           weather: { weatherText, city, description },
-           error: null
-         });
-       }
-     }
-   });
+  const city = req.body.city;
+  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  request(url, function(err, response, body) {
+    if (err) {
+      res.render("weather", {
+        weather: null,
+        error: "Error, please try again"
+      });
+    } else {
+      let weather = JSON.parse(body);
+      if (weather.main === undefined) {
+        res.render("weather", {
+          weather: null,
+          error: "Error, please try again"
+        });
+      } else {
+        let weatherText = weather.main.temp;
+        let city = weather.name;
+        let description = weather.weather[0].description;
+        res.render("weather", {
+          weather: { weatherText, city, description },
+          error: null
+        });
+      }
+    }
+  });
 });
 
 module.exports = app;
