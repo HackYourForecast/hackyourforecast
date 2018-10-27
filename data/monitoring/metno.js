@@ -5,12 +5,13 @@ const axios = require('axios');
 const sleep = require('sleep');
 const geohash = require('latlon-geohash');
 const mysql = require('mysql');
+const path = require('path');
 const { promisify } = require('util');
-const { readJSONFile } = require('../../config/fileOperations');
+const { readJSONFile } = require(path.join(__dirname,'..','..','config','fileOperations'));
 
-const CITIES_FILE = './top-1000-cities.json';
+const CITIES_FILE = path.join(__dirname,'top-1000-cities.json');
 const METNO_API_URL = 'https://api.met.no/weatherapi/locationforecast/1.9/?lat=';
-const { SLEEP_IN_SECOND, DB_CONFIG } = require('../../config/config.js');
+const { SLEEP_IN_SECOND, DB_CONFIG } = require(path.join(__dirname,'..','..','config','config.js'));
 
 async function main() {
 

@@ -2,9 +2,9 @@
 
 const mysql = require('mysql');
 const { promisify } = require('util');
-
-const { DB_CONFIG, SOURCE_APIS } = require('../../config/config');
-const tempDiff = require('./tempDiff');
+const path = require('path');
+const { DB_CONFIG, SOURCE_APIS } = require(path.join(__dirname,'..','..','config','config'));
+const tempDiff = require(path.join(__dirname,'tempDiff'));
 
 async function main() {
 
