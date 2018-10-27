@@ -3,10 +3,11 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const moment = require('moment');
-const { readJSONFile } = require('../../config/fileOperations');
+const path = require('path');
+const { readJSONFile } = require(path.join(__dirname,'..','..','config','fileOperations'));
 
 const DUTCH_URL = 'https://www.knmi.nl/nederland-nu/weer/waarnemingen';
-const CITIES_LOCATION_FILE = './netherlandsCities.json';
+const CITIES_LOCATION_FILE = path.join(__dirname,'netherlandsCities.json');
 
 async function main() {
     try {
