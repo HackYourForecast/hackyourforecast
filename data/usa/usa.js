@@ -2,12 +2,13 @@
 
 const axios = require('axios');
 const sleep = require('sleep');
-const { readJSONFile } = require('../../config/fileOperations');
+const path = require('path');
+const { readJSONFile } = require(path.join(__dirname,'..','..','config','fileOperations'));
 const Windrose = require('windrose');
 
-const { SLEEP_IN_SECOND, USA_API_USERAGENT } = require('../../config/config');
+const { SLEEP_IN_SECOND, USA_API_USERAGENT } = require(path.join(__dirname,'..','..','config','config'));
 const USA_WEATHER_API = 'https://api.weather.gov/points/';
-const USA_CITIES_FILE = './usaCities.json';
+const USA_CITIES_FILE = path.join(__dirname,'usaCities.json');
 
 async function main() {
   const usaWeather = [];

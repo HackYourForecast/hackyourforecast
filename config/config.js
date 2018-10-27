@@ -1,7 +1,7 @@
 const config = {};
 
-config.TODO_DIR_PATH = "../tmp/todo"; // define the path where output will be saved
-config.ARCHIVE_DIR_PATH = "../tmp/archive"; //define the path where output will be archived
+config.TODO_DIR_PATH = "/tmp/todo"; // define the path where output will be saved
+config.ARCHIVE_DIR_PATH = "/tmp/archive"; //define the path where output will be archived
 config.SOURCE_APIS = [
   "rmi_Belgium",
   "Netherlands",

@@ -3,14 +3,15 @@
 const geohash = require('latlon-geohash');
 const mysql = require('mysql');
 const fs = require('fs-extra');
-const { translateSymbol } = require('./translateSymbol');
+const path = require('path');
+const { translateSymbol } = require(path.join(__dirname,'translateSymbol'));
 
 const {
     DB_CONFIG,
     QUERY_CHUNK_SIZE,
     TODO_DIR_PATH,
     ARCHIVE_DIR_PATH
-} = require("../../config/config");
+} = require(path.join(__dirname,'..','..','config','config'));
 const weatherFiles = fs.readdirSync(TODO_DIR_PATH);
 
 if (Object.keys(weatherFiles).length === 0) {
