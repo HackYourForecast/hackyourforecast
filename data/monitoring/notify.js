@@ -20,7 +20,6 @@ async function main() {
 
     const sourceResults = await dbConnection.query(
       'SELECT name, contributorEmail from source where isActive = 1');
-    console.log(sourceResults);
 
     const sql = 'SELECT SUM(countOfItems) AS count, SUM(sumOfTempC) AS sumOfTempC, SUM(sumOfWindMps) \
      AS sumOfWindMps,MAX(lastUpdateTimestamp) AS lastUpdate \

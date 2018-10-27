@@ -4,10 +4,10 @@ const cheerio = require('cheerio');
 const axios = require('axios');
 const Windrose = require('windrose');
 const path = require('path');
-const { readJSONFile } = require(path.join(__dirname,'..','..','config','fileOperations'));
+const { readJSONFile } = require(path.join(__dirname, '..', '..', 'config', 'fileOperations'));
 
 const ICELAND_URL = 'https://icelandmonitor.mbl.is/weather/forecasts/';
-const CITIES_LOCATION_FILE = path.join(__dirname,'icelandCities.json');
+const CITIES_LOCATION_FILE = path.join(__dirname, 'icelandCities.json');
 
 async function main() {
 
@@ -95,7 +95,11 @@ function getData(html, className) {
     }
     else {
         values = html("div[class^='d--maincol'] span[class^=" + className + "] > span[class=value]")
-            .toArray().map(elem => Number(elem.children[0].data));
+            .toArray().map(elem => {
+                if (elem.children[0])
+                    return Number(elem.children[0].data);
+                else return null;
+            });
         if (values.length === 0 || values.some(isNaN))
             throw new Error('error fetching ' + className + ' values');
         return values;
