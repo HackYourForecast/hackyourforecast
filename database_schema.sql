@@ -33,7 +33,7 @@ CREATE TABLE `stats` (
   `sumOfTempCDiff` float DEFAULT NULL,
   `tempDiffCount` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`sourceApi`,`runTimeStamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `weather` (
   `windProbability` float DEFAULT NULL,
   `updatedTimestamp` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`fromHour`,`geohash3`,`geohash5`,`sourceApi`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -105,7 +105,7 @@ CREATE TABLE `weather_monitoring` (
   `windProbability` float DEFAULT NULL,
   `updatedTimestamp` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`fromHour`,`geohash3`,`geohash5`,`sourceApi`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
