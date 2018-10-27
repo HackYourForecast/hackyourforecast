@@ -24,6 +24,12 @@ config.smhi_db = {
     password: 'password', //fill password (only on working repo do not push that in public)
     database: 'database' //fill database name
 }
+
+config.SMTP_CONFIG = {
+    user: "user@example.com", // email and password to use as sender of notify emails 
+    pass: "password"
+}
+
 config.smhi_downsample = 'number'; //choose from 0 to 20 to reduce fetched location number
 
 module.exports = config;

@@ -19,9 +19,7 @@ config.SOURCE_APIS = [
 config.DB_CONFIG = {
   host: "localhost",
   user: "root",
-  // password: 'root2018',
-  // database: 'smhi_db'
-  password: "Data000",
+  password: "password",
   database: "weather"
 };
 config.STATS_API_PORT = 5000;
@@ -39,6 +37,11 @@ config.smhi_db = {
   password: "Data000",
   database: "weather"
 };
+
+config.SMTP_CONFIG = {
+  user: "user@example.com",
+  pass: "password"
+}
 
 config.smhi_downsample = 17;
 
