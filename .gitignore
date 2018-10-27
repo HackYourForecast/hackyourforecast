@@ -2,3 +2,6 @@
 /package-lock.json
 /data/tmp
 /charts/node_modules
+output.json
+/config/config.js
+

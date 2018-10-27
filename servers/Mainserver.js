@@ -3,7 +3,6 @@ const app = express();
 const weatherApi = require("./weatherApi");
 const statsApi = require("./statsApi");
 const pagesServer = require("./pagesServer");
-const { STATS_API_PORT } = require("../config/config");
 
 //Amir's server handles weather api
 app.use("/", weatherApi);
@@ -11,7 +10,7 @@ app.use("/", weatherApi);
 app.use("/", statsApi);
 //Knar's server renders pages
 app.use("/", pagesServer);
-
-app.listen(STATS_API_PORT, () => {
-  console.log(`Listening to port: ${STATS_API_PORT}`);
+let port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Listening to port: ${port}`);
 });

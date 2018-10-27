@@ -18,9 +18,9 @@ config.SOURCE_APIS = [
 ];
 config.DB_CONFIG = {
   host: "localhost",
-  user: "root",
-  password: "password",
-  database: "weather"
+  user: "hyf",
+  password: "jashdha61672673!",
+  database: "hackyourforecast"
 };
 config.STATS_API_PORT = 5000;
 config.QUERY_CHUNK_SIZE = 500;
@@ -33,9 +33,9 @@ config.metOfficeUK_chunk = 9;
 
 config.smhi_db = {
   host: "localhost",
-  user: "root",
-  password: "Data000",
-  database: "weather"
+  user: "hyf",
+  password: "jashdha61672673!",
+  database: "hackyourforecast"
 };
 
 config.SMTP_CONFIG = {
