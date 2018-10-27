@@ -3,10 +3,11 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const Windrose = require('windrose');
-const { readJSONFile } = require('../../config/fileOperations');
+const path = require('path');
+const { readJSONFile } = require(path.join(__dirname,'..','..','config','fileOperations'));
 
 const ICELAND_URL = 'https://icelandmonitor.mbl.is/weather/forecasts/';
-const CITIES_LOCATION_FILE = './icelandCities.json';
+const CITIES_LOCATION_FILE = path.join(__dirname,'icelandCities.json');
 
 async function main() {
 
