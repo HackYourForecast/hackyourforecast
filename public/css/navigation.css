@@ -12,17 +12,18 @@ body {
 .logo {
   display: inline-block;
   width: 30%;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 20px;
 }
 
 .navbar ul {
   list-style: none;
-  text-shadow: 0px 1px 2px rgb(73, 72, 72);
+  text-shadow: 1px 1px 1px rgb(73, 72, 72);
 }
 
+
 /*mobile */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .navbar {
     font-size: 18px;
     background-color: rgba(3, 3, 3, 0.582);
@@ -61,10 +62,10 @@ body {
 }
 
 /* bigger screen */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .logo #bigLogo {
-    width: 20%;
-    margin-top: 10px;
+    width: 180px;
+    margin-left: -25px;
   }
   .navbar {
     display: flex;
@@ -101,5 +102,20 @@ body {
   }
   .logo #smallLogo {
     display: none;
+  }
+
+  .navbar a {
+    color: black;
+  }
+
+  .navbar.scrolled {
+    background-color: #fff !important;
+
+    transition: background-color 200ms linear;
+  }
+
+  .navbar.scrolled #bigLogo {
+    width: 150px;
+    margin-top: -20px;
   }
 }

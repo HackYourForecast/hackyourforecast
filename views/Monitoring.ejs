@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include  ./partials/head.ejs %>
+        <link href='../public/css/monitoring.css' type='text/css' rel='stylesheet' />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+</head>
+
+<body>
+    <header>
+        <nav class='navbar'>
+            <% include  ./partials/navigation.ejs %>
+
+        </nav>
+    </header>
+    <div class='bg'> </div>
+    <div id='select-container'>
+        <h1>Weather statistics based on APIs</h1>
+        <select id='select'>
+            <option value="" disabled selected>Select an API</option>
+        </select>
+    </div>
+    <section>
+
+        <div id='ChartContainer'>
+            <h3>Sum of Temperature and Wind</h3>
+            <canvas class='one' id='apiTempAndWind'></canvas>
+            <h3>Sum of Temperature difference compared with Met.no</h3>
+            <canvas class='two' id='tempDiff'></canvas>
+            <h3> Sum of Pressure</h3>
+            <canvas class='three' id='apiPressure'></canvas>
+            <h3>Number of Cities</h3>
+            <canvas class='four' id='itemCounts'></canvas>
+            <!-- <h2> Total data statistics</h2>
+        <h3> Sum of Temperature and Wind</h3>
+        <canvas id="sumTempAndWind" class='graph'></canvas>
+        <h3>Sum of pressure</h3>
+        <canvas id="sumPressure" class='graph'></canvas>
+        <h3> Number of Items</h3>
+        <canvas id="numItems" class='graph'></canvas>
+        <h3> Temperature Difference compared with Met.no</h3>
+        <canvas id="tempDiff" class='graph'></canvas> -->
+        </div>
+    </section>
+    <footer>
+        <% include  ./partials/footer.ejs %>
+    </footer>
+    <script src='./script/graphs.js' type='module'></script>
+    <script src='./script/toogleManu.js' type='text/javascript'></script>
+</body>
+
+</html>

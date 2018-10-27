@@ -44,7 +44,7 @@ app.post("/api/weather", (req, res) => {
     queryGeo3 += queryPattern;
     const geoHash3 = geoHash.encode(coords[i].lat, coords[i].lng, 3);
     const time = parseInt(coords[i].timestamp / 3600) * 3600;
-    queryCoords.push(geoHash3, time);
+    queryCoords.push(geoHash3, coords[i].timestamp);
   }
 
   //query from database

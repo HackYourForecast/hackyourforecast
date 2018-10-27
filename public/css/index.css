@@ -38,12 +38,16 @@ h3 {
   margin-top: 30px;
 }
 .btn {
-  padding: 10px 15px;
+  border-color: transparent;
+  background-color: rgba(0, 0, 0, 0.808);
   color: white;
+  padding: 10px 15px;
   text-decoration: none;
   margin-right: 5px;
   font-size: 13px;
   text-transform: uppercase;
+  transition: 0.3s;
+  border-radius: 5px;
 }
 
 /*big screen*/
@@ -52,42 +56,36 @@ h3 {
     color: white;
   }
 
-  .navbar ul,
+  .btn {
+    width: 200px;
+    text-align: center;
+  }
+
   h3 {
-    text-shadow: 2px 1px 3px rgb(0, 0, 0);
-    color: white;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+    font-size: 40px;
+    margin-top: 30px;
+  }
+
+  .navbar.scrolled a {
+    text-shadow: none;
   }
 
   video {
     width: 100%;
   }
 
-  /* 
-  #clicked {
-    border-left: 1px solid rgb(0, 0, 0);
-    border-right: 1px solid rgb(0, 0, 0);
-    padding: 10px;
-  } */
-
-  .btn {
-    font-weight: bold;
-    padding: 10px 30px;
-    background-color: white;
-    color: rgb(116, 114, 114);
-    box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, 0.75);
-    transition: 0.3s;
-    border-radius: 5px;
-  }
-
   .btn:hover {
     border-color: transparent;
-    background-color: rgba(0, 0, 0, 0.808);
+    background-color: rgba(182, 182, 182, 0.808);
     transition: 0.3s;
-    transform: translate(3px, 4px);
+    transform: translate(2px, 2.5px);
     color: white;
+    color: black;
   }
   footer p {
-    color: white;
+    color: rgb(160, 156, 156);
     font-size: 13px;
   }
 

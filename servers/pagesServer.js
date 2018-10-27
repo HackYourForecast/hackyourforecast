@@ -29,46 +29,64 @@ app.get("/npm", (req, res) => {
   res.render("npm");
 });
 
-app.get("/contributors", (req, res) => {
-  res.render("contributors");
+app.get("/contribute", (req, res) => {
+  res.render("contribute");
 });
 
 app.get("/weather", (req, res) => {
   res.render("weather");
 });
 
+app.get("/monitoring", (req, res) => {
+  res.render("monitoring");
+});
+
+app.get("/about", (req, res) => {
+  res.render("aboutus");
+});
+
 app.get("/cities", (req, res) => {
   res.send(cities);
 });
 
-app.post("/weather", (req, res) => {
-  const city = req.body.city;
+// axios
+//   .post("localhost:5000/api/weather", {
+//     locations: [{ lat: "-38.36", lng: "-22.73", timestamp: "1539969000" }]
+//   })
+//   .then(res => console.log(res))
+//   .catch(err => console.log(err));
 
-  let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  request(url, function(err, response, body) {
-    if (err) {
-      res.render("weather", {
-        weather: null,
-        error: "Error, please try again"
-      });
-    } else {
-      let weather = JSON.parse(body);
-      if (weather.main === undefined) {
-        res.render("weather", {
-          weather: null,
-          error: "Error, please try again"
-        });
-      } else {
-        let weatherText = weather.main.temp;
-        let city = weather.name;
-        let description = weather.weather[0].description;
-        res.render("weather", {
-          weather: { weatherText, city, description },
-          error: null
-        });
-      }
-    }
-  });
+app.post("/weather", (req, res) => {
+  // let lng = req.body.longitude;
+  // let lat = req.body.latitude;
+  // let timestamp = req.body.timestamp;
+
+   const city = req.body.city;
+   let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+   request(url, function(err, response, body) {
+     if (err) {
+       res.render("weather", {
+         weather: null,
+         error: "Error, please try again"
+       });
+     } else {
+       let weather = JSON.parse(body);
+       if (weather.main === undefined) {
+         res.render("weather", {
+           weather: null,
+           error: "Error, please try again"
+         });
+       } else {
+         let weatherText = weather.main.temp;
+         let city = weather.name;
+         let description = weather.weather[0].description;
+         res.render("weather", {
+           weather: { weatherText, city, description },
+           error: null
+         });
+       }
+     }
+   });
 });
 
 module.exports = app;

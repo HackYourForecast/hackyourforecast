@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include  ./partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="../public/css/contrib.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <% include  ./partials/navigation.ejs %>
+    </nav>
+  </header>
+
+  <div class='bg'> </div>
+  <h1> How to contribute </h1>
+  <section class='api-paragraph'>
+    <p> The more locations we cover to provide free weather data to developers the better.
+      <br> Feel free to contribute to our open source project!
+    </p>
+    <h3> Guideline</h3>
+    <ol>
+      <li>Fork and Clone our
+        <a href='https://github.com/HackYourForecast/hackyourforecast' target='_blank'>repository</a>
+      </li>
+      <li>Create a branch</li>
+      <li>Create a file and fetch the API you work with</li>
+      <li>The output should be in this exact format (see below)
+      </li>
+      <li>Metrics are defined in the property names.For example 'C' indicates Celsius in 'temperatureC',</li>
+      <li>Property keys are important.Please make sure to use the same property names we used. </li>
+      <li> And finally create a pull request</li>
+    </ol>
+    <code>
+               <pre>
+               <div class='json'>
+        /* Output  format*/
+ [
+  {
+    "location": {
+      "lng": -0.854,
+      "lat": 60.749,
+      "alt": 15
+    },
+    "weather": [
+      {
+        "fromHour": 1540036800, //timestamp
+        "toHour": 1540047600, //timestamp
+        "updatedTimestamp": 1540051200,
+        "temperatureC": 10,
+        "feelsLikeC": 6,
+        "symbol": "Overcast",
+        "humidityPercent": 96,
+        "windSpeedMps": 9.83,
+        "windGustMps": 15.2,
+        "windDirectionDegree": 180
+      },
+      {
+        "fromHour": 1540047600,
+        "toHour": 1540058400,
+        "updatedTimestamp": 1540051200,
+        "temperatureC": 12,
+        "feelsLikeC": 8,
+        "symbol": "Overcast",
+        "humidityPercent": 97,
+        "windSpeedMps": 11.18,
+        "windGustMps": 16.09,
+        "windDirectionDegree": 202.5
+      },... MORE WEATHER FORECASTS
+    ]
+ },
+ {
+    "location": {
+      "lng": -0.854,
+      "lat": 60.749,
+      "alt": 15
+    },
+    "weather": [
+      {
+        "fromHour": 1540036800, //timestamp
+        "toHour": 1540047600, //timestamp
+        "updatedTimestamp": 1540051200,
+        "temperatureC": 10,
+        "feelsLikeC": 6,
+        "symbol": "Overcast",
+        "humidityPercent": 96,
+        "windSpeedMps": 9.83,
+        "windGustMps": 15.2,
+        "windDirectionDegree": 180
+      },
+      {
+        "fromHour": 1540047600,
+        "toHour": 1540058400,
+        "updatedTimestamp": 1540051200,
+        "temperatureC": 12,
+        "feelsLikeC": 8,
+        "symbol": "Overcast",
+        "humidityPercent": 97,
+        "windSpeedMps": 11.18,
+        "windGustMps": 16.09,
+        "windDirectionDegree": 202.5
+      }, ...
+   ], ... MORE LOCATIONS
+  }
+]
+</div>
+               </pre>
+           </code>
+
+  </section>
+
+  <footer>
+    <% include  ./partials/footer.ejs %>
+  </footer>
+
+  <script src='./script/toogleManu.js' type='text/javascript'></script>
+
+
+</body>
+
+</html>

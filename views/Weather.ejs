@@ -20,6 +20,9 @@
     <div class='forecast-container'>
         <form action="/weather" method="post">
             <input name="city" type="text" placeholder="Enter a City" required autocomplete="off">
+            <!-- <input name="longitude" type="text" placeholder="Enter a longitude" required autocomplete="on">
+            <input name="latitude" type="text" placeholder="Enter a latitude" required autocomplete="on">
+            <input name="timestamp" type="text" placeholder="Enter a timestamp" required autocomplete="on"> -->
             <button>Get JSON </button>
         </form>
         <% if(typeof weather !== 'undefined'){ %>

@@ -34,3 +34,9 @@
   margin-top: 20px;
   text-align: left;
 }
+
+@media (min-width: 501px) {
+  .navbar.scrolled a {
+    color: black;
+  }
+}

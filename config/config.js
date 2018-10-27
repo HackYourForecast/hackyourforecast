@@ -21,7 +21,7 @@ config.DB_CONFIG = {
   user: "root",
   // password: 'root2018',
   // database: 'smhi_db'
-  password: "password",
+  password: "Data000",
   database: "weather"
 };
 config.STATS_API_PORT = 5000;
@@ -36,8 +36,8 @@ config.metOfficeUK_chunk = 9;
 config.smhi_db = {
   host: "localhost",
   user: "root",
-  password: "root2018",
-  database: "smhi_db"
+  password: "Data000",
+  database: "weather"
 };
 
 config.smhi_downsample = 17;

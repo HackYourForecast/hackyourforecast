@@ -8,12 +8,6 @@
   color: white;
 }
 
-/* #clicked {
-  border-left: 1px solid rgb(255, 255, 255);
-  border-right: 1px solid rgb(255, 255, 255);
-  padding: 10px;
-} */
-
 .bg {
   background-image: url("photos-videos/npmBg.jpg");
   min-height: 300px;
@@ -98,5 +92,11 @@ section {
     border: none;
     background-color: rgba(218, 240, 247, 0.356);
     padding: 3px;
+  }
+}
+
+@media (min-width: 501px) {
+  .navbar.scrolled a {
+    color: black;
   }
 }
