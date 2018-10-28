@@ -32,7 +32,7 @@ const citiesAndCoords = require("../data.json");
             const humidityPercent = Number(getDataAt(15));
             const pressureHPA = Number(getDataAt(19));
             const cityDetails = citiesAndCoords.find(city => city.name === cityName);
-            const updatedTimestamp = (moment(time, "ddd MMM DD HH:mm:ss YYYY").unix()) - 25200;
+            const updatedTimestamp = +new Date()/1000;
             if (windDirectionDeg !== undefined) {
                 let i = windDirectionDeg.value;
                 result.push({
