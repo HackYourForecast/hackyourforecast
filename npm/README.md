@@ -1,14 +1,15 @@
 # hack-your-forecast
+
 ![npm bundle size (minified)](https://img.shields.io/HackYourForecast/min/hackyourforecast.svg)
 
 Open source weather API, Provided by _https://www.HackYourForecast.com_, powered by contributors ❤
 
 ## installation and usage:
 
-`npm i hack-your-forecast`
+`npm i hackyourforecast`
 
 ```javascript
-const hackYourForecast = require("hack-your-forecast");
+const hackYourForecast = require("hackyourforecast");
 
 const cities = [
   { lat: 37.5681, lng: 126.998, timestamp: 1539268428 },
@@ -56,4 +57,3 @@ hackYourForecast.lookup(cities).then(console.log);
 ## License:
 
 ISC
-

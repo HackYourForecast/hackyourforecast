@@ -43,7 +43,7 @@ class HackYourForecast {
 
   async queryBackend(requestArr) {
     const axiosInstance = axios.create({
-      baseURL: 'http://localhost:5000',
+      baseURL: 'https://hackyourforecast.com',
       timeout: 1000
     });
     const fetchedData = [];

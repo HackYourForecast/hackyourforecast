@@ -1,6 +1,6 @@
 {
-  "name": "hack-your-forecast",
-  "version": "1.0.1-1",
+  "name": "hackyourforecast",
+  "version": "1.0.1",
   "description": "Open source weather API, Provided by https://www.HackYourForecast.com, powered by contributors ❤",
   "main": "index.js",
   "repository": {
