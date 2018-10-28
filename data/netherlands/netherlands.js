@@ -18,8 +18,7 @@ async function main() {
 
         const updated = cheerioObject("div[class^= 'table__wrp'] div")
             .toArray().map(elem => elem.children[0].data);
-        const updatedTimestamp = moment(updated[0], 'DD MMM YYYY HH Z', 'nl').unix();
-
+        const updatedTimestamp = parseInt((+new Date()/1000) / 3600) * 3600
         const stationsData = cheerioObject('tbody > tr')
             .toArray()
             .map(row => row.children
@@ -44,13 +43,13 @@ async function main() {
             city.weather = [{
                 updatedTimestamp,
                 fromHour: updatedTimestamp,
-                toHour: updatedTimestamp + 7200,
+                toHour: updatedTimestamp + 3600,
                 symbol: stationsData[index][1],
                 temperatureC: stationsData[index][2],
                 humidityPercent: stationsData[index][3],
-                windSpeedMps: stationsData[index][5],
-                visibilityM: stationsData[index][6],
-                pressureHPA: stationsData[index][7]
+                windSpeedMps: stationsData[index][6],
+                visibilityM: stationsData[index][7],
+                pressureHPA: stationsData[index][8]
             }];
         });
 

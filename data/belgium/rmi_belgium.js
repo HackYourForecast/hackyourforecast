@@ -35,14 +35,7 @@ async function main() {
             arr[4] = (arr[4] * 0.277777778).toFixed(2);
         });
 
-        let time = object('.table')
-            .children('h3')
-            .text()
-            .replace("Observations  ", "")
-            .replace("(", "")
-            .replace(" h)", ":00");
-        let date = Date.parse(time) / 1000;
-
+        let date = +new Date() / 1000;
         const objects = data.map(arr => {
             if (arr[5] == "-") {
                 arr[5] = null
