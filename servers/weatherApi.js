@@ -4,7 +4,8 @@ const morgan = require("morgan");
 const geoHash = require("latlon-geohash");
 const sortByDistance = require("sort-by-distance");
 const bodyParser = require("body-parser");
-const config = require("../config/config.example");
+const path = require('path');
+const config = require(path.join(__dirname,'..','config','config.js'));
 
 const app = Express();
 app.use(Express.json());

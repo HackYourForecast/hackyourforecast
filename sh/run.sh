@@ -21,12 +21,7 @@ node data/smhi/smhi.js > /tmp/todo/smhi.$(date +%s).json 2>>/tmp/log.smhi.txt &
 pids="$pids $!"
 node data/netherlands/netherlands.js > /tmp/todo/netherlands.$(date +%s).json 2>>/tmp/log.netherlands.txt &
 pids="$pids $!"
-node data/monitoring/metno.js >/tmp/log.metno.txt 2>&1 &
-pids="$pids $!"
 
 echo waiting for $pids
 wait $pids
-
-node data/consumer/consumer.js >> /tmp/log.consumer.txt 2>&1
-node data/monitoring/monitoring.js >> /tmp/log.monitoring.txt 2>&1
 
