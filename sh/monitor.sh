@@ -1,3 +1,2 @@
-node data/monitoring/metno.js >/tmp/log.metno.txt 2>&1
-node data/monitoring/monitoring.js >> /tmp/log.monitoring.txt 2>&1
-
+node data/monitoring/metno.js 2>&1 | logger -t 'hyf.metno'
+node data/monitoring/monitoring.js 2>&1 | logger -t 'hyf.monitoring'
