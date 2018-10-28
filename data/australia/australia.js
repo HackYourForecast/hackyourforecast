@@ -49,6 +49,8 @@ function getCityData(areaUrl) {
             .filter(cell => cell.name === 'td' && cell.type === 'tag')
             .map(td => td.children[0] && td.children[0].data)
         );
+
+      utcTime = +new Date()/1000;
       const weatherInfo = data.map(arr => {
         if (
           new RegExp('melbourne', 'i').test(header) ||
@@ -56,19 +58,14 @@ function getCityData(areaUrl) {
           new RegExp('canberra', 'i').test(header) ||
           new RegExp('hobart', 'i').test(header)
         ) {
-          utcTime = moment(arr[0], 'DD/hh:mma').unix() - 32400;
           timeStamp = parseInt(utcTime / 3600) * 3600;
         } else if (new RegExp('brisbane', 'i').test(header)) {
-          utcTime = moment(arr[0], 'DD/hh:mma').unix() - 28800;
           timeStamp = parseInt(utcTime / 3600) * 3600;
         } else if (new RegExp('adelaide', 'i').test(header)) {
-          utcTime = moment(arr[0], 'DD/hh:mma').unix() - 30600;
           timeStamp = parseInt(utcTime / 3600) * 3600;
         } else if (new RegExp('darwin', 'i').test(header)) {
-          utcTime = moment(arr[0], 'DD/hh:mma').unix() - 27000;
           timeStamp = parseInt(utcTime / 3600) * 3600;
         } else if (new RegExp('perth', 'i').test(header)) {
-          utcTime = moment(arr[0], 'DD/hh:mma').unix() - 21600;
           timeStamp = parseInt(utcTime / 3600) * 3600;
         }
         let degree = wind.getDegrees(arr[6]);
