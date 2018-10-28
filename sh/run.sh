@@ -5,11 +5,11 @@ node data/uk/metOfficeUK.js  > /tmp/todo/metOfficeUK.$(date +%s).json 2>> /tmp/l
 pids="$pids $!"
 node data/usa/usa.js > /tmp/todo/usa.$(date +%s).json 2>> /tmp/log.usa.txt &
 pids="$pids $!"
-node data/europe/rmi_europe.js > /tmp/todo/rmi_europe.$(date +%s).json 2>> /tmp/log.rmi_europe.txt &
+node data/rmi_belgium/rmi_europe.js > /tmp/todo/rmi_belgium.$(date +%s).europe.json 2>> /tmp/log.rmi_europe.txt &
 pids="$pids $!"
-node data/belgium/rmi_belgium.js > /tmp/todo/rmi_belgium.$(date +%s).json  2>> /tmp/log.rmi_belgium.txt &
+node data/rmi_belgium/rmi_belgium.js > /tmp/todo/rmi_belgium.$(date +%s).belgium.json  2>> /tmp/log.rmi_belgium.txt &
 pids="$pids $!"
-node data/world/rmi_world.js > /tmp/todo/rmi_world.$(date +%s).json  2>> /tmp/log.rmi_world.txt &
+node data/rmi_belgium/rmi_world.js > /tmp/todo/rmi_belgium.$(date +%s).world.json  2>> /tmp/log.rmi_world.txt &
 pids="$pids $!"
 node data/iceland/iceland.js > /tmp/todo/iceland.$(date +%s).json 2>> /tmp/log.iceland.txt &
 pids="$pids $!"

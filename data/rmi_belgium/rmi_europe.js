@@ -1,12 +1,12 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
 const coords = require('../data.json');
-const world = 'http://www.meteo.be/meteo/view/en/123352-World.html';
+const europe = 'http://www.meteo.be/meteo/view/en/123349-Europe.html';
 const wind = require('windrose');
 
 async function main() {
   try {
-    const res = await axios.get(world);
+    const res = await axios.get(europe);
     const object = cheerio.load(res.data);
 
     const cities = object('table .side_th')
@@ -36,14 +36,7 @@ async function main() {
     data.forEach(arr => {
       arr[4] = (arr[4] * 0.277777778).toFixed(2);
     });
-    let time = object('.table')
-      .children('h3')
-      .text()
-      .replace('Observations  ', '')
-      .replace(',', '')
-      .replace('(', '')
-      .replace(' h)', ':00 UTC');
-    let date = Date.parse(time) / 1000;
+    let date = +new Date() / 1000;
 
     const objects = data.map(arr => {
       if (arr[5] == '-') {
@@ -95,7 +88,7 @@ async function main() {
 
     console.log(JSON.stringify(array, null, 2));
   } catch (error) {
-    console.error(error, 'rmi_world');
+    console.error(error, 'europe');
   }
 }
 main();

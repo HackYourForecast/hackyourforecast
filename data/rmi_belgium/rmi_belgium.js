@@ -36,6 +36,7 @@ async function main() {
         });
 
         let date = +new Date() / 1000;
+        console.error(date);
         const objects = data.map(arr => {
             if (arr[5] == "-") {
                 arr[5] = null

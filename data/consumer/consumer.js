@@ -12,6 +12,7 @@ const {
     TODO_DIR_PATH,
     ARCHIVE_DIR_PATH
 } = require(path.join(__dirname,'..','..','config','config'));
+
 const weatherFiles = fs.readdirSync(TODO_DIR_PATH);
 
 if (Object.keys(weatherFiles).length === 0) {
@@ -37,7 +38,13 @@ dbConnection.connect(function (err) {
             console.log(`${filePATH} was deleted!`)
             return;
         } else {
-            const data = JSON.parse(fs.readFileSync(filePATH, 'utf8'));
+            let data = undefined;
+            try {
+                data = JSON.parse(fs.readFileSync(filePATH, 'utf8'));
+            } catch(e) {
+                console.error("failed to parse " + filePATH + " error: " + e);
+		return;
+            }
             if (data.length !== 0) {
                 const sourceApi = file.split('.')[0].toLowerCase();;
 
@@ -63,7 +70,8 @@ dbConnection.connect(function (err) {
                         locationElement.weather.forEach(elem => {
                             const symbol = translateSymbol(elem.symbol);
                             for (let i = 0; i < (elem.toHour - elem.fromHour) / 3600; i++) {
-                                const fromHour = elem.fromHour + (i * 3600);
+                                let fromHour = parseInt(elem.fromHour) + (i * 3600);
+                                fromHour = parseInt(fromHour/3600) * 3600;
                                 values.push([geohash5, geohash3, lat, sourceApi, lng, symbol, fromHour,
                                     elem.altitude, elem.fogPercent, elem.pressureHPA, elem.cloudinessPercent, elem.windDirectionDeg,
                                     elem.dewpointTemperatureC, elem.windGustMps, elem.humidityPercent, elem.areaMaxWindSpeedMps,
