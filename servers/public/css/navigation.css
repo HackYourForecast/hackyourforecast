@@ -19,6 +19,9 @@ body {
 .navbar ul {
   list-style: none;
   text-shadow: 1px 1px 1px rgb(73, 72, 72);
+  border-bottom: 1px solid rgba(76, 83, 85, 0.356);
+
+  padding: 5px;
 }
 
 /*mobile */
