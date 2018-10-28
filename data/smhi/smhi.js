@@ -3,7 +3,8 @@
 const fetch = require("node-fetch");
 const sleep = require("sleep");
 const geolib = require("geolib");
-const config = require('../../config/config.js');
+const path = require('path');
+const config = require(path.join(__dirname,'..','..','config','config.js'));
 const baseURL = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2"; //setting base url with all static parameters
 const coordinatesURL = `${baseURL}/geotype/multipoint.json?downsample=${config.smhi_downsample}`; //getting coordinates from the api
 const polygonURL = `${baseURL}/geotype/polygon.json`;
