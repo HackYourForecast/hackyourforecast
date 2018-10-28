@@ -21,7 +21,6 @@ body {
   text-shadow: 1px 1px 1px rgb(73, 72, 72);
 }
 
-
 /*mobile */
 @media (max-width: 767px) {
   .navbar {

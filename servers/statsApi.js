@@ -2,7 +2,7 @@ const Express = require("express");
 const mysql = require("mysql");
 const { promisify } = require("util");
 
-const { SOURCE_APIS, DB_CONFIG } = require("../config/config");
+const { SOURCE_APIS, DB_CONFIG } = require("../config/config.example");
 //const port = process.env.PORT || 5000;
 const app = Express();
 const dbPool = mysql.createPool({

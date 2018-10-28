@@ -3,36 +3,86 @@
   padding: 0;
   font-family: "Montserrat", sans-serif;
   color: rgb(14, 13, 13);
+  list-style: none;
 }
+
+p a {
+  text-decoration: underline;
+}
+
+p {
+  margin: 15px;
+  text-align: center;
+}
+
 .navbar a,
 .navbar i {
   color: white;
 }
 
-/* #clicked {
-  border-left: 1px solid rgb(255, 255, 255);
-  border-right: 1px solid rgb(255, 255, 255);
-  padding: 10px;
-} */
-
 .bg {
-  background-image: url("photos-videos/lightning.jpg");
-  min-height: 400px;
+  background-image: url("photos-videos/npmBg.jpg");
+  min-height: 300px;
   background-attachment: fixed;
   background-size: cover;
 }
 
-.api-paragraph {
-  height: 400px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+section {
+  height: auto;
+  width: auto;
+  border: 1px solid rgba(168, 203, 214, 0.356);
+  padding: 30px;
 }
-.api-paragraph p {
-  width: 50%;
-  margin-top: 20px;
-  text-align: left;
+
+.red {
+  color: red;
+}
+p {
+  line-height: 25px;
+}
+
+h3 {
+  font-weight: bold;
+  border: 1px solid rgba(168, 203, 214, 0.356);
+  background-color: rgba(218, 240, 247, 0.356);
+  width: auto;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+h3 a {
+  text-decoration: underline;
+}
+
+ul {
+  text-align: center;
+}
+
+section li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+pre {
+  width: auto;
+  background-color: rgba(194, 232, 243, 0.356);
+  padding: 20px;
+  font-size: 12px;
+}
+
+.install-section {
+  margin-left: 5%;
+}
+
+h2,
+h3 {
+  border-bottom: 1px solid rgba(168, 203, 214, 0.356);
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
 }
 
 @media (min-width: 501px) {

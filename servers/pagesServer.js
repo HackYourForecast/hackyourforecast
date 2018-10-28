@@ -4,7 +4,7 @@ const app = express();
 const request = require("request");
 const requireDir = require("require-dir");
 const cities = requireDir("../citiesFolder");
-const path = require('path');
+const path = require("path");
 const axios = require("axios");
 
 app.set("view engine", "ejs");
@@ -33,8 +33,8 @@ app.get("/contribute", (req, res) => {
   res.render("contribute");
 });
 
-app.get("/weather", (req, res) => {
-  res.render("weather");
+app.get("/apitester", (req, res) => {
+  res.render("apitester");
 });
 
 app.get("/monitoring", (req, res) => {
@@ -49,54 +49,42 @@ app.get("/cities", (req, res) => {
   res.send(cities);
 });
 
-
-
-app.post("/weather", (req, res) => {
+app.post("/apitester", (req, res) => {
   let lng = req.body.longitude;
   let lat = req.body.latitude;
   let timestamp = req.body.timestamp;
 
-
   axios
-    .post("http://localhost:5000/api/weather", { locations: [{ "lat": 53, "lng": 7, "timestamp": 1541554733 }] }
-    )
-    .then(res => handleData(res.data.result))
-    .catch(err => console.log('err', err));
+    .post("https://www.hackyourforecast.com/api/weather", {
+      locations: [{ lat: lat, lng: lng, timestamp: timestamp }]
+    })
+    .then(res => handleData(res))
+    .catch(err =>
+      console.error(
+        `Can not fetch the endpoint ${err.response.status} - ${
+          err.response.statusText
+        }`
+      )
+    );
 
-  const handleData = (data) => {
-    console.log(data);
-    res.render("weather", {
-      data
-    });
-  }
-
-
-  // const city = req.body.city;
-  // let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-  // request(url, function(err, response, body) {
-  //   if (err) {
-  //     res.render("weather", {
-  //       weather: null,
-  //       error: "Error, please try again"
-  //     });
-  //   } else {
-  //     let weather = JSON.parse(body);
-  //     if (weather.main === undefined) {
-  //       res.render("weather", {
-  //         weather: null,
-  //         error: "Error, please try again"
-  //       });
-  //     } else {
-  //       let weatherText = weather.main.temp;
-  //       let city = weather.name;
-  //       let description = weather.weather[0].description;
-  //       res.render("weather", {
-  //         weather: { weatherText, city, description },
-  //         error: null
-  //       });
-  //     }
-  //   }
-  // });
+  const handleData = response => {
+    if (response.data.result === undefined) {
+      console.log(response.data);
+      res.render("apitester", {
+        data: {
+          json: response.data,
+          error: null
+        }
+      });
+    } else {
+      res.render("apitester", {
+        data: {
+          json: JSON.stringify(response.data.result, null, 4),
+          error: null
+        }
+      });
+    }
+  };
 });
 
 module.exports = app;

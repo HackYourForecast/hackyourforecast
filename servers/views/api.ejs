@@ -19,14 +19,123 @@
 
     <div class='bg'> </div>
     <section class='api-paragraph'>
-        <h2>Why would a weather API benefit you?</h2>
-        <p> Our weather API provides a simple way for developers and programmers to embed weather data into their apps and websites.
-            They are free for personal as well as commercial use depending on how you wish to use weather API. It could be
-            for a blog, website or smartphone application. Regardless of your requirements, programmers and developers all
-            over the world are benefitting from our weather API software.
+        <h2> About API </h2>
+        <h3>To make use of our API make sure to checkout
+            <a href='/npm' target='_blank'>NPM </a> package documentation too.</h3>
+        <p>
+            HackYourForecast provides weather data from different official meteorological agencies around the world.
+            <br> Our aim is to get them all but so far we have</p>
+        <ul>
+            <li>RMI (Belgium)</li>
+            <li>KNMI (Netherlands)</li>
+            <li>Icelandic Met Office (Iceland)</li>
+            <li> National Weather Service (USA)</li>
+            <li>Met Office (UK),Bureau of Meteorology (Australia)</li>
+            <li>Meteoprog (Poland)</li>
+            <li>ARSO (Slovenia)</li>
+            <li>KMA (SouthKorea)</li>
+            <li> SMHI (Sweden)</li>
+        </ul>
+        <p> Applications that want to benefit from open Data Meteorological Forecasts can use this service to retrieve data.
+            The Entry point is located at
+            <strong>http://www.hackyourforecast.com/api/weather</strong> The data is returned as application/json (JSON). All times
+            are in in
+            <strong>Timestamp</strong> format complying to UTC (Coordinated Universal Time).
+        </p>
+
+        <h3>ENDPOINT IS :</h3>
+        <p>
+            https://www.hackyourforecast.com/api/weather
+            <br> To get a forecast, send post request to our API use the body to send the coordination of the location/city ,
+            and the hour you need the weather data for (this is optional, if this wasn’t sent in the request body the weather
+            data for the current time will be returned) this information should be in a JSON format. To get started with
+            the API, see Example and Forecast Demo.
+        </p>
+
+        <h3>LICENSE:</h3>
+        <p>
+            HackYourForecast API is published under the following
+            <span class='red'> terms and conditions.
+                <br> When using our Data please mention the source the data came from. You can reach these licenses at</span>
+            <a href='https://www.hackyourforecast.com/api/weather/license' target='_blank'>
+                <br>https://www.hackyourforecast.com/api/weather/license</a>
+        </p>
+        <h3>
+            <strong>Example:</strong>
+        </h3>
+        <br>
+        <code>
+                <pre> 
+axios.post(‘http://www.hackyourforecast.com/api/weather’,{"locations" : [
+
+{
+		"lat" : -26.44 ,
+		"lng" : 152.94 ,
+		"timestamp" : 1539969000
+	},
+	{
+		"lat": 23,
+		"lng": 15,
+		"timestamp": 1539894600
+	}
+]
+}).then(function (response) {
+console.log(response);
+}).catch(function (error) {
+console.log(error);
+});</pre>
+<br>
+<strong>Forecast Demo:</strong> Here is a sample of the result you get.
+<pre>{
+
+"result": [
+	{
+		"weather": {
+			"geohash5": "r7kcf",
+			"geohash3": "r7k",
+			"sourceApi": "Australia",
+			"symbol": null,
+			"fromHour": 1539969000,
+			"altitude": 6.4,
+			"fogPercent": null,
+			"pressureHPA": 1017,
+			"cloudinessPercent": null,
+			"windDirectionDeg": null,
+			"dewpointTemperatureC": 17.4,
+			"windGustMps": 1.944,
+			"humidityPercent": 99,
+			"areaMaxWindSpeedMps": null,
+			"windSpeedMps": 2,
+			"temperatureC": 18,
+			"lowCloudsPercent": null,
+			"mediumCloudsPercent": null,
+			"highCloudsPercent": null,
+			"temperatureProbability": null,
+			"windProbability": null,
+			"updatedTimestamp": 1539976824
+		},
+		"location": {
+			"lat": -26.39,
+			"lng": 153.04,
+			"fromHour": 1539969000,
+			"distance": 0.11180339887498472
+		}
+	},
+	{
+		"Data not found for this location": {
+			"lat": 23,
+			"lng": 15
+		}
+	},
+	...
+]</pre>
+        </code>
+        <br>
+        <strong> Parameters:</strong> The parameters and the unites of the parameters are concatenated in the property name of the
+        returned result object.
         </p>
     </section>
-    <div class='bg'> </div>
+
 
     <footer>
         <% include  ./partials/footer.ejs %>

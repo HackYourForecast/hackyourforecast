@@ -81,7 +81,9 @@ section {
 @media (max-width: 500px) {
   .install-section {
     font-size: 11px;
-    width: 420px;
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
   }
   .contribution-section p {
     font-size: 10px;

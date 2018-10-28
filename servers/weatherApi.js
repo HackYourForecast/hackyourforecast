@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const geoHash = require("latlon-geohash");
 const sortByDistance = require("sort-by-distance");
 const bodyParser = require("body-parser");
-const config = require("../config/config");
+const config = require("../config/config.example");
 
 const app = Express();
 app.use(Express.json());
@@ -41,7 +41,7 @@ app.post("/api/weather", (req, res) => {
   for (let i = 0; i < coords.length; i++) {
     queryGeo3 += queryPattern;
     let geoHash3 = geoHash.encode(coords[i].lat, coords[i].lng, 3);
-    let ts = coords[i].timestam || (+new Date() / 1000)
+    let ts = coords[i].timestam || +new Date() / 1000;
     let time = parseInt(ts / 3600) * 3600;
     queryCoords.push(geoHash3, time);
   }
@@ -72,8 +72,8 @@ app.post("/api/weather", (req, res) => {
           const origin = { lat: coords[j].lat, lng: coords[j].lng };
           const object = sortByDistance(origin, point, opts)[0];
           if (object === undefined) {
-            sortItems.push({ 'Data not found for this location' : origin})
-          }else if (object.distance === undefined) {
+            sortItems.push({ "Data not found for this location": origin });
+          } else if (object.distance === undefined) {
             object.distance = 0;
             const structured = splitObj(object);
             sortItems.push(structured);
@@ -89,34 +89,34 @@ app.post("/api/weather", (req, res) => {
       try {
         return {
           weather: {
-            'geohash5': obj.geohash5,
-            'geohash3': obj.geohash3,
-            'sourceApi': obj.sourceApi,
-            'symbol': obj.symbol,
-            'fromHour': obj.fromHour,
-            'altitude': obj.altitude,
-            'fogPercent': obj.fogPercent,
-            'pressureHPA': obj.pressureHPA,
-            'cloudinessPercent': obj.cloudinessPercent,
-            'windDirectionDeg': obj.windDirectionDeg,
-            'dewpointTemperatureC': obj.dewpointTemperatureC,
-            'windGustMps': obj.windGustMps,
-            'humidityPercent': obj.humidityPercent,
-            'areaMaxWindSpeedMps': obj.areaMaxWindSpeedMps,
-            'windSpeedMps': obj.windSpeedMps,
-            'temperatureC': obj.temperatureC,
-            'lowCloudsPercent': obj.lowCloudsPercent,
-            'mediumCloudsPercent': obj.mediumCloudsPercent,
-            'highCloudsPercent': obj.highCloudsPercent,
-            'temperatureProbability': obj.temperatureProbability,
-            'windProbability': obj.windProbability,
-            'updatedTimestamp': obj.updatedTimestamp
+            geohash5: obj.geohash5,
+            geohash3: obj.geohash3,
+            sourceApi: obj.sourceApi,
+            symbol: obj.symbol,
+            fromHour: obj.fromHour,
+            altitude: obj.altitude,
+            fogPercent: obj.fogPercent,
+            pressureHPA: obj.pressureHPA,
+            cloudinessPercent: obj.cloudinessPercent,
+            windDirectionDeg: obj.windDirectionDeg,
+            dewpointTemperatureC: obj.dewpointTemperatureC,
+            windGustMps: obj.windGustMps,
+            humidityPercent: obj.humidityPercent,
+            areaMaxWindSpeedMps: obj.areaMaxWindSpeedMps,
+            windSpeedMps: obj.windSpeedMps,
+            temperatureC: obj.temperatureC,
+            lowCloudsPercent: obj.lowCloudsPercent,
+            mediumCloudsPercent: obj.mediumCloudsPercent,
+            highCloudsPercent: obj.highCloudsPercent,
+            temperatureProbability: obj.temperatureProbability,
+            windProbability: obj.windProbability,
+            updatedTimestamp: obj.updatedTimestamp
           },
           location: {
-            'lat': obj.lat,
-            'lng': obj.lng,
-            'fromHour': obj.fromHour,
-            'distance': obj.distance
+            lat: obj.lat,
+            lng: obj.lng,
+            fromHour: obj.fromHour,
+            distance: obj.distance
           }
         };
       } catch (e) {
