@@ -1,8 +1,8 @@
 # hack-your-forecast
 
-![npm bundle size (minified)](https://img.shields.io/HackYourForecast/min/hackyourforecast.svg)
-
 Open source weather API, Provided by _https://www.HackYourForecast.com_, powered by contributors ❤
+
+See [available agencies](https://hackyourforecast.com/api#apis-we-work-with)
 
 ## installation and usage:
 
@@ -47,10 +47,12 @@ hackYourForecast.lookup(cities).then(console.log);
 
 ## Contribution
 
-1. Fork it and create your feature branch: git checkout -b my-new-feature
+1. [Fork this](https://github.com/HackYourForecast/hackyourforecast) and create your feature branch: git checkout -b my-new-feature
 2. Commit your changes: git commit -am 'Added some feature'
 3. Push to the branch: git push origin my-new-feature
-4. Submit a pull request
+4. Submit a pull request.
+
+see more details about contributing [here.](https://hackyourforecast.com/contribute)
 
 ![an overly used coding meme](https://img.devrant.com/devrant/rant/r_536209_rcy6p.gif)
 
