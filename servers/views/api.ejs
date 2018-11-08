@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <% include  ./partials/head.ejs %>
+ <% include  ./partials/head.ejs %>
         <link rel="stylesheet" type="text/css" href="../public/css/api.css">
-
-</head>
-
-
-
+    </head>
 <body>
     <header>
         <nav class="navbar">
             <% include  ./partials/navigation.ejs %>
         </nav>
     </header>
-
-    <div class='bg'> </div>
+<div class='bg'> </div>
     <section class='quick-navigation'>
         <ul>
             <li>
@@ -66,10 +59,8 @@
             <strong>Timestamp</strong> format complying to UTC (Coordinated Universal Time).
         </p>
     </section>
-
-    <div class='bg-sections'> </div>
-
-    <section id='api-endpoint'>
+ <div class='bg-sections'> </div>
+ <section id='api-endpoint'>
         <h3>ENDPOINT IS :</h3>
         <p>
             https://www.hackyourforecast.com/api/weather
@@ -79,8 +70,7 @@
             the API, see Example and Forecast Demo.
         </p>
     </section>
-
-    <section id='example'>
+ <section id='example'>
         <h3>
             <strong>Example:</strong>
         </h3>
@@ -157,11 +147,8 @@
         returned result object.
         </p>
     </section>
-
-
-    </section>
-
-    <div class='bg-sections'> </div>
+</section>
+<div class='bg-sections'> </div>
     <section id='license'>
         <h3>LICENSE:</h3>
         <p>
@@ -172,11 +159,11 @@
                 <br>https://www.hackyourforecast.com/api/weather/license</a>
         </p>
     </section>
-    <div class='bg-final-section'> </div>
+  
     <footer>
         <% include  ./partials/footer.ejs %>
     </footer>
     <script src='./script/toogleManu.js ' type='text/javascript '></script>
+<script type="text/javascript" src="../script/detectScroll.js"></script>
 </body>
-
 </html>

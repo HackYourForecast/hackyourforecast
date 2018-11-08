@@ -3,9 +3,6 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-}
-
-body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -18,14 +15,11 @@ body {
 
 .navbar ul {
   list-style: none;
-  text-shadow: 1px 1px 1px rgb(73, 72, 72);
-  border-bottom: 1px solid rgba(76, 83, 85, 0.356);
-
   padding: 5px;
 }
 
-/*mobile */
-@media (max-width: 767px) {
+/*mobile-tablet */
+@media (max-width: 999px) {
   .navbar {
     font-size: 18px;
     background-color: rgba(3, 3, 3, 0.582);
@@ -64,7 +58,7 @@ body {
 }
 
 /* bigger screen */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .logo #bigLogo {
     width: 180px;
     margin-left: -25px;
@@ -77,21 +71,18 @@ body {
     width: 100%;
     position: fixed;
     z-index: 20;
+    font-weight: bold;
   }
 
   .main-nav {
     display: flex;
     margin-right: 30px;
-    flex-direction: row;
     justify-content: flex-end;
   }
 
   .nav-links {
     margin-left: 40px;
     display: inline-block;
-    border-left: 1px transparent;
-    border-right: 1px transparent;
-    padding: 10px;
     transition: all 0.3s ease-out;
   }
 
@@ -111,9 +102,12 @@ body {
   }
 
   .navbar.scrolled {
-    background-color: #fff !important;
-
+    background-color: #fff;
     transition: background-color 200ms linear;
+    color: black;
+  }
+  .navbar.scrolled a {
+    color: black;
   }
 
   .navbar.scrolled #bigLogo {

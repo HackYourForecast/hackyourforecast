@@ -7,7 +7,9 @@ fetch("/cities")
 
 let longLat = [];
 
-let map = L.map("mapid").setView([10, -10], 1.5);
+let map = L.map("mapid", {
+  preferCanvas: true
+}).setView([10, -10], 1.5);
 
 let Esri_WorldImagery = L.tileLayer(
   "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
@@ -29,7 +31,6 @@ L.tileLayer(
   }
 );
 
-map.on("click", onMapClick);
 let popup = L.popup();
 
 function onMapClick(e) {
@@ -42,11 +43,21 @@ map.on("click", onMapClick, { passive: true });
 
 function handleCities(data) {
   for (let prop in data) {
-    console.log(data[prop]);
-    data[prop].map(city => {
-      if (city.lat !== null && city.lng !== null) {
-        const marker = new L.marker([city.lat, city.lng]).addTo(map);
+    data[prop].map(location => {
+      if (location.lat !== null && location.lng !== null) {
+        const marker = new L.marker([location.lat, location.lng], {
+          color: "#3388ff"
+        })
+          .bindPopup(
+            `
+             <strong>City </strong>:${location.name}`
+          )
+          .addTo(map);
       }
     });
   }
 }
+
+setTimeout(function() {
+  map.invalidateSize();
+}, 500);

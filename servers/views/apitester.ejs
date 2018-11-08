@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="../public/css/apitester.css" />
+  </head>
 
-<head>
-
-    <% include  ./partials/head.ejs %>
-        <link rel="stylesheet" type="text/css" href="../public/css/apitester.css">
-
-</head>
-
-
-
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <% include  ./partials/navigation.ejs %>
-        </nav>
+      <nav class="navbar"><% include ./partials/navigation.ejs %></nav>
     </header>
-    <div class='bg'> </div>
-    <div class='forecast-container'>
-        <form action="/apitester" method="post">
-            <!-- <input name="city" type="text" placeholder="Enter a City" required autocomplete="off"> -->
-            <h1> Test our API
-                <br>Get a JSON output example Below</h1>
-            <input name="longitude" type="number" step='any' placeholder="Enter a longitude" required autocomplete="on">
-            <input name="latitude" type="number" step='any' placeholder="Enter a latitude" required autocomplete="on">
-            <input name="timestamp" type="number" step='any' placeholder="Enter a timestamp" required autocomplete="on">
-            <button>
-                Get JSON
-            </button>
-        </form>
+    <div class="bg"></div>
+    <div class="forecast-container">
+      <form action="/apitester" method="post">
+        <!--
+          <input name="city" type="text" placeholder="Enter a City" required autocomplete="off">
+        -->
+        <h1>Test our API <br />Get a JSON output example Below</h1>
+        <input
+          name="longitude"
+          type="number"
+          step="any"
+          placeholder="Enter a longitude"
+          required
+          autocomplete="on"
+        />
+        <input
+          name="latitude"
+          type="number"
+          step="any"
+          placeholder="Enter a latitude"
+          required
+          autocomplete="on"
+        />
+        <input
+          name="timestamp"
+          id="unix-field"
+          type="number"
+          step="any"
+          placeholder="Enter a timestamp"
+          required
+          autocomplete="on"
+        />
+        <button>Get JSON</button>
+      </form>
     </div>
-    <div class='converter'>
-        <label for="date">
-            Get the timestamp:
-        </label>
-        <input type="datetime-local" name="date" id='date-input' />
-        <p id='unix-field'>Timestamp result</p>
-        <button onclick='convertToUnix()'>
-            Convert
-        </button>
-
+    <div class="converter">
+      <label for="date"> Get the timestamp: </label>
+      <input type="datetime-local" name="date" id="date-input" />
+      <button onclick="convertToUnix()">Convert</button>
     </div>
-
 
     <% if(typeof data !== 'undefined'){ %>
-        <section class='json-section' id='data-output'>
-            <code>
-          <pre>
+    <section class="json-section" id="data-output">
+      <code>
+        <pre>
+
+
             <%= data.json %>
-            </pre>
-        </code>
-            <% } %>
-                <% if(typeof data === 'undefined'){ %>
-                    <!-- <p id='error-p'>
-                        Error occurred: enter valid parameters or reload the page
-                    </p> -->
-        </section>
-        <% } %>
 
-            <footer>
-                <% include  ./partials/footer.ejs %>
 
-            </footer>
-            <script src='./script/toogleManu.js' type='text/javascript'></script>
-            <script src='./script/converter.js'></script>
 
-</body>
 
+
+
+
+        </pre>
+      </code>
+      <% } %> <% if(typeof data === 'undefined'){ %>
+      <!--
+        <p id='error-p'>
+
+
+            Error occurred: enter valid parameters or reload the page
+
+
+
+        </p>
+      -->
+    </section>
+    <% } %>
+
+    <footer><% include ./partials/footer.ejs %></footer>
+    <script src="./script/toogleManu.js" type="text/javascript"></script>
+    <script src="./script/converter.js"></script>
+    <script type="text/javascript" src="../script/detectScroll.js"></script>
+  </body>
 </html>

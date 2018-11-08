@@ -26,6 +26,7 @@ section {
   width: auto;
   background-color: rgba(194, 232, 243, 0.356);
   padding: 20px;
+  overflow-x: scroll;
 }
 
 .json {

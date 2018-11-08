@@ -63,10 +63,9 @@ h1 {
   position: center;
 }
 
-@media screen and (min-width: 768px) {
-  nav a {
+@media (min-width: 768px) {
+  .navbar a {
     color: white;
-    text-shadow: 0px 1px 2px rgb(73, 72, 72);
   }
 }
 

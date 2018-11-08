@@ -41,12 +41,6 @@ section p {
   background-size: cover;
 }
 
-.bg-final-section {
-  background-image: url("photos-videos/apiBG.jpg");
-  min-height: 150px;
-  background-attachment: fixed;
-}
-
 section {
   height: auto;
   width: auto;
@@ -78,8 +72,6 @@ h3 a {
 
 ul {
   text-align: center;
-  border-bottom: 1px solid rgba(108, 120, 124, 0.356);
-  border-top: 1px solid rgba(63, 67, 68, 0.356);
   padding: 8px;
 }
 
@@ -115,5 +107,12 @@ h3 {
 @media (min-width: 501px) {
   .navbar.scrolled a {
     color: black;
+  }
+}
+
+@media (max-width: 500px) {
+  .bg,
+  .bg-sections {
+    background-attachment: scroll;
   }
 }

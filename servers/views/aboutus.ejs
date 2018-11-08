@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <% include ./partials/head.ejs %>
+    <link rel="stylesheet" type="text/css" href="../public/css/aboutus.css" />
+  </head>
 
-<head>
-    <% include  ./partials/head.ejs %>
-        <link rel="stylesheet" type="text/css" href="../public/css/aboutus.css">
-
-</head>
-
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <% include  ./partials/navigation.ejs %>
-        </nav>
+      <nav class="navbar"><% include ./partials/navigation.ejs %></nav>
     </header>
-    <div class='bg'> </div>
+    <div class="bg"></div>
     <section>
-        <h1>About US</h1>
-        <p>We believe that weather data should be provided for free.
-            <br>This is why we created this open source project to
-            <br>provide and combine available free weather data in one place.
-            <br>Free weather data will give developers opportunity to create great weather related (and not only) applications.</p>
+      <h1>About US</h1>
+      <p>
+        We believe that weather data should be provided for free. <br />This is
+        why we created this open source project to <br />provide and combine
+        available free weather data in one place. <br />Free weather data will
+        give developers opportunity to create great weather related (and not
+        only) applications.
+      </p>
 
-        <div id='team'>
-            <h3>Our Team</h3>
-            <ul>
-                <li>Knar
-                    <a href='https://github.com/PKnar' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li>Neveen
-                    <a href='https://github.com/neveenatik' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li>Meazer
-                    <a href='https://github.com/Meazer' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li>Amir
-                    <a href='https://github.com/amirno1' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li>Husam
-                    <a href='https://github.com/ThreePalmTrees' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-                <li>Zaed
-                    <a href='https://github.com/zmagzoub' target='_blank'>
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
+      <div id="team">
+        <h3>Our Team</h3>
+        <ul>
+          <li>
+            Knar
+            <a href="https://github.com/PKnar" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            Neveen
+            <a href="https://github.com/neveenatik" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            Meazer
+            <a href="https://github.com/Meazer" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            Amir
+            <a href="https://github.com/amirno1" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            Husam
+            <a href="https://github.com/ThreePalmTrees" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            Zaed
+            <a href="https://github.com/zmagzoub" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
-
-    <script src='./script/toogleManu.js' type='text/javascript'></script>
-
-    <footer>
-        <% include  ./partials/footer.ejs %>
-
-    </footer>
-</body>
-
+    <footer><% include ./partials/footer.ejs %></footer>
+    <script src="./script/toogleManu.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../script/detectScroll.js"></script>
+  </body>
 </html>
