@@ -63,14 +63,14 @@ h1 {
   position: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navbar a {
     color: white;
   }
 }
 
 /* small screen */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 999px) {
   nav a,
   i {
     color: white;

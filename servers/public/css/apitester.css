@@ -45,7 +45,6 @@ label {
   text-transform: uppercase;
   color: white;
   font-weight: bold;
-  text-shadow: 2px 1px 1px rgb(7, 4, 4);
 }
 
 .converter input {
@@ -130,14 +129,14 @@ footer i {
 }
 
 /*big screen*/
-@media screen and (min-width: 767px) {
+@media (min-width: 767px) {
   .navbar a {
     color: white;
   }
 }
 
 /* small screen */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   nav a,
   i {
     color: white;
