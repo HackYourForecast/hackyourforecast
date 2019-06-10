@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/HackYourForecast/hackyourforecast#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
