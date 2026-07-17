@@ -111,13 +111,20 @@ function startIngestionScheduler() {
     return;
   }
 
+  if (String(process.env.HYF_DISABLE_CRON || "").toLowerCase() === "true") {
+    console.log("[ingestion] scheduler disabled via HYF_DISABLE_CRON=true");
+    return;
+  }
+
+  const schedule = process.env.HYF_CRON_SCHEDULE || "5 * * * *";
+
   // Warm cache on startup.
   runIngestionOnce()
     .then(result => console.log("[ingestion] startup run:", result))
     .catch(error => console.error("[ingestion] startup failed:", error.message));
 
-  // Run every hour at minute 5.
-  cron.schedule("5 * * * *", async () => {
+  // Run hourly by default (minute 5), configurable with HYF_CRON_SCHEDULE.
+  cron.schedule(schedule, async () => {
     try {
       const result = await runIngestionOnce();
       console.log("[ingestion] scheduled run:", result);
@@ -125,6 +132,8 @@ function startIngestionScheduler() {
       console.error("[ingestion] scheduled run failed:", error.message);
     }
   });
+
+  console.log(`[ingestion] scheduler active with cron: ${schedule}`);
 }
 
 module.exports = {

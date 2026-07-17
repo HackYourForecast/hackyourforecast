@@ -39,6 +39,8 @@ Optional environment variables:
 - `HYF_CITY_LIMIT` (integer) to reduce number of cities fetched.
 - `HYF_RETENTION_HOURS` (default `72`) to trim old cache rows.
 - `PGSSL=disable` for local non-SSL Postgres.
+- `HYF_CRON_SCHEDULE` (default `5 * * * *`) to customize ingestion cadence.
+- `HYF_DISABLE_CRON=true` to turn scheduler off while keeping API online.
 
 ## Run Locally
 
