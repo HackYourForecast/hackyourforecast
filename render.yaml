@@ -16,6 +16,8 @@ services:
         sync: false
       - key: HYF_CITY_LIMIT
         value: "120"
+      - key: HYF_CRON_SCHEDULE
+        value: "5 */2 * * *"
       - key: HYF_RETENTION_HOURS
         value: "72"
 

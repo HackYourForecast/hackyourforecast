@@ -116,7 +116,7 @@ function startIngestionScheduler() {
     return;
   }
 
-  const schedule = process.env.HYF_CRON_SCHEDULE || "5 * * * *";
+  const schedule = process.env.HYF_CRON_SCHEDULE || "5 */2 * * *";
 
   // Warm cache on startup.
   runIngestionOnce()
