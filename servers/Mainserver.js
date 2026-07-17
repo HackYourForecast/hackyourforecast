@@ -3,6 +3,7 @@ const app = express();
 const weatherApi = require("./weatherApi");
 const statsApi = require("./statsApi");
 const pagesServer = require("./pagesServer");
+const { startIngestionScheduler } = require("./liveIngestion");
 
 app.get("/healthz", (req, res) => {
   res.json({ ok: true, service: "hackyourforecast" });
@@ -17,4 +18,5 @@ app.use("/", pagesServer);
 let port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Listening to port: ${port}`);
+  startIngestionScheduler();
 });

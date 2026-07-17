@@ -7,3 +7,18 @@ services:
     startCommand: npm start
     healthCheckPath: /healthz
     autoDeploy: true
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: hackyourforecast-db
+          property: connectionString
+      - key: METNO_USER_AGENT
+        sync: false
+      - key: HYF_CITY_LIMIT
+        value: "120"
+      - key: HYF_RETENTION_HOURS
+        value: "72"
+
+databases:
+  - name: hackyourforecast-db
+    plan: free
