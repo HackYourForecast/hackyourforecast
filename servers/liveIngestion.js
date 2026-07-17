@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const axios = require("axios");
 const cron = require("node-cron");
-const geoHash = require("latlon-geohash");
 const {
   hasDatabase,
   initDb,
@@ -10,8 +8,8 @@ const {
   rebuildStatsForHour,
   trimOldData
 } = require("./db");
+const { getEnabledProviders } = require("./providers");
 
-const SOURCE_API = "metno";
 const CITIES_PATH = path.join(__dirname, "..", "citiesFolder", "citiesToDisplay.json");
 
 function toHourTimestamp(unixSeconds = Date.now() / 1000) {
@@ -25,76 +23,81 @@ function loadCities() {
   return raw;
 }
 
-async function fetchMetnoForCity(city, userAgent) {
-  const url = `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${encodeURIComponent(
-    city.lat
-  )}&lon=${encodeURIComponent(city.lng)}`;
+function getMissingEnvForProvider(provider, env = process.env) {
+  const required = Array.isArray(provider.requiredEnv) ? provider.requiredEnv : [];
+  return required.filter(key => !env[key]);
+}
 
-  const response = await axios.get(url, {
-    timeout: 15000,
-    headers: {
-      "User-Agent": userAgent,
-      Accept: "application/json"
+async function fetchRowsForProvider(provider, cities, context) {
+  const concurrency = Math.max(1, Number(process.env.HYF_FETCH_CONCURRENCY || 6));
+  const rows = [];
+  let errors = 0;
+
+  let index = 0;
+  async function worker() {
+    while (index < cities.length) {
+      const i = index;
+      index += 1;
+      const city = cities[i];
+      try {
+        const row = await provider.fetchForecastForCity(city, context);
+        if (row) rows.push(row);
+      } catch (error) {
+        errors += 1;
+        console.warn(
+          `[ingestion:${provider.id}] fetch failed for ${city?.name || "unknown city"}: ${error.message}`
+        );
+      }
     }
-  });
+  }
 
-  const timeseries = response.data?.properties?.timeseries || [];
-  if (!timeseries.length) return null;
-
-  const nowHour = toHourTimestamp();
-  const point =
-    timeseries.find(entry => toHourTimestamp(new Date(entry.time).getTime() / 1000) >= nowHour) ||
-    timeseries[0];
-
-  const hourTs = toHourTimestamp(new Date(point.time).getTime() / 1000);
-  const details = point?.data?.instant?.details || {};
-  const symbol =
-    point?.data?.next_1_hours?.summary?.symbol_code ||
-    point?.data?.next_6_hours?.summary?.symbol_code ||
-    point?.data?.next_12_hours?.summary?.symbol_code ||
-    null;
-
-  const lat = Number(city.lat);
-  const lng = Number(city.lng);
-
-  return {
-    sourceApi: SOURCE_API,
-    geohash5: geoHash.encode(lat, lng, 5),
-    geohash3: geoHash.encode(lat, lng, 3),
-    lat,
-    lng,
-    symbol,
-    fromHour: hourTs,
-    updatedTimestamp: toHourTimestamp(),
-    temperatureC: Number(details.air_temperature ?? null),
-    pressureHPA: Number(details.air_pressure_at_sea_level ?? null),
-    windSpeedMps: Number(details.wind_speed ?? null),
-    humidityPercent: Number(details.relative_humidity ?? null)
-  };
+  const workers = Array.from({ length: Math.min(concurrency, cities.length) }, () => worker());
+  await Promise.all(workers);
+  return { rows, errors };
 }
 
 async function runIngestionOnce() {
   if (!hasDatabase()) return { skipped: true, reason: "DATABASE_URL missing" };
 
-  const userAgent = process.env.METNO_USER_AGENT;
-  if (!userAgent) {
-    return { skipped: true, reason: "METNO_USER_AGENT missing" };
-  }
-
   await initDb();
 
   const cities = loadCities();
+  const context = { env: process.env, nowHour: toHourTimestamp() };
+  const { providers, missing } = getEnabledProviders(process.env);
+
+  if (providers.length === 0) {
+    return {
+      skipped: true,
+      reason: missing.length
+        ? `No valid providers enabled. Unknown ids: ${missing.join(",")}`
+        : "No providers enabled"
+    };
+  }
+
   const rows = [];
   let errors = 0;
+  const providerSummary = {};
 
-  for (const city of cities) {
-    try {
-      const row = await fetchMetnoForCity(city, userAgent);
-      if (row) rows.push(row);
-    } catch (error) {
-      errors += 1;
-      console.warn(`met.no fetch failed for ${city.name || "unknown city"}: ${error.message}`);
+  for (const provider of providers) {
+    const missingEnv = getMissingEnvForProvider(provider, process.env);
+    if (missingEnv.length > 0) {
+      providerSummary[provider.id] = {
+        skipped: true,
+        reason: `Missing env: ${missingEnv.join(",")}`,
+        rows: 0,
+        errors: 0
+      };
+      continue;
     }
+
+    const fetched = await fetchRowsForProvider(provider, cities, context);
+    rows.push(...fetched.rows);
+    errors += fetched.errors;
+    providerSummary[provider.id] = {
+      skipped: false,
+      rows: fetched.rows.length,
+      errors: fetched.errors
+    };
   }
 
   const inserted = await upsertWeatherRows(rows);
@@ -102,7 +105,14 @@ async function runIngestionOnce() {
   await rebuildStatsForHour(runTs);
   await trimOldData(Number(process.env.HYF_RETENTION_HOURS || 72));
 
-  return { skipped: false, cities: cities.length, inserted, errors, runTs };
+  return {
+    skipped: false,
+    cities: cities.length,
+    providers: providerSummary,
+    inserted,
+    errors,
+    runTs
+  };
 }
 
 function startIngestionScheduler() {
@@ -123,7 +133,7 @@ function startIngestionScheduler() {
     .then(result => console.log("[ingestion] startup run:", result))
     .catch(error => console.error("[ingestion] startup failed:", error.message));
 
-  // Run hourly by default (minute 5), configurable with HYF_CRON_SCHEDULE.
+  // Run every 2h by default (minute 5), configurable with HYF_CRON_SCHEDULE.
   cron.schedule(schedule, async () => {
     try {
       const result = await runIngestionOnce();

@@ -15,15 +15,15 @@ Legacy graduation project revived to run without the original private MySQL setu
 
 The app now supports two modes:
 
-- **Live mode (recommended):** fetches forecasts from the open met.no API, caches into PostgreSQL, and serves from DB.
+- **Live mode (recommended):** fetches forecasts from enabled open-data providers (currently met.no + Open-Meteo), caches into PostgreSQL, and serves from DB.
 - **Snapshot mode (fallback):** serves historical archived data in `data/*/output.json` if DB is not configured.
 
-## Live Open-Data Integration (met.no + DB + cron)
+## Live Open-Data Integration (multi-provider + DB + cron)
 
 When `DATABASE_URL` is set, the server:
 
 1. Creates cache tables (`weather_cache`, `stats_hourly`) automatically.
-2. Fetches weather from **met.no Locationforecast 2.0** for cities in `citiesFolder/citiesToDisplay.json`.
+2. Fetches weather from enabled providers for cities in `citiesFolder/citiesToDisplay.json`.
 3. Stores/upserts forecast rows in Postgres.
 4. Rebuilds hourly stats for charts.
 5. Runs on startup, then every hour via cron (`5 * * * *`).
@@ -31,7 +31,7 @@ When `DATABASE_URL` is set, the server:
 Required environment variables:
 
 - `DATABASE_URL` = Postgres connection string.
-- `METNO_USER_AGENT` = required by met.no policy, example:
+- `METNO_USER_AGENT` = required by met.no policy if `metno` provider is enabled, example:
 	- `HackYourForecast/2.0 (https://your-domain.example; contact@your-domain.example)`
 
 Optional environment variables:
@@ -39,8 +39,10 @@ Optional environment variables:
 - `HYF_CITY_LIMIT` (integer) to reduce number of cities fetched.
 - `HYF_RETENTION_HOURS` (default `72`) to trim old cache rows.
 - `PGSSL=disable` for local non-SSL Postgres.
+- `HYF_PROVIDERS` (default `metno,openmeteo`) comma-separated provider ids.
 - `HYF_CRON_SCHEDULE` (default `5 */2 * * *`) to customize ingestion cadence.
 - `HYF_DISABLE_CRON=true` to turn scheduler off while keeping API online.
+- `HYF_FETCH_CONCURRENCY` (default `6`) worker concurrency per provider.
 
 ## Run Locally
 
@@ -89,6 +91,10 @@ Add environment variables in Render:
 
 - Historical ingestion/monitoring scripts in `data/` still reference the original 2018 pipeline and are not required for current runtime.
 - If DB is missing, snapshot mode keeps the app running for demo use.
+
+## Provider Candidates
+
+See `docs/provider-candidates.md` for candidate meteorological agencies and each candidate's integration requirements.
 
 ## Weather Symbols
 
