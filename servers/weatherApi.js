@@ -1,11 +1,7 @@
 const Express = require("express");
-const mysql = require("mysql");
 const morgan = require("morgan");
-const geoHash = require("latlon-geohash");
-const sortByDistance = require("sort-by-distance");
 const bodyParser = require("body-parser");
-const path = require('path');
-const config = require(path.join(__dirname,'..','config','config.js'));
+const { findBestMatch, toApiResult, snapshotRecords } = require("./snapshotStore");
 
 const app = Express();
 app.use(Express.json());
@@ -17,114 +13,34 @@ app.use(
 
 app.use(morgan("short"));
 
-const connection = mysql.createConnection({
-  host: config.DB_CONFIG.host,
-  user: config.DB_CONFIG.user,
-  password: config.DB_CONFIG.password,
-  database: config.DB_CONFIG.database,
-  multipleStatements: true,
-  debug: false
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.log(err);
-  }
-  console.log("Connected");
-});
-
 app.post("/api/weather", (req, res) => {
-  const coords = req.body.locations;
-  const queryPattern =
-    "SELECT * FROM weather where geohash3 = ? && fromHour = ?;";
-  let queryGeo3 = "";
-  const queryCoords = [];
-  for (let i = 0; i < coords.length; i++) {
-    queryGeo3 += queryPattern;
-    let geoHash3 = geoHash.encode(coords[i].lat, coords[i].lng, 3);
-    let ts = coords[i].timestam || +new Date() / 1000;
-    let time = parseInt(ts / 3600) * 3600;
-    queryCoords.push(geoHash3, time);
+  const coords = Array.isArray(req.body.locations) ? req.body.locations : [];
+  if (coords.length === 0) {
+    return res.status(400).json({ error: "locations must be a non-empty array" });
   }
 
-  //query from database
-  connection.query(queryGeo3, queryCoords, (err, rows) => {
-    if (err) {
-      console.log("Failed fetching the file " + err);
-    }
-    if (rows.length === 0) {
-      res.send("We dont have any information with the data you entered.");
-      res.end();
-      return;
-    } else {
-      console.log("Fetched successfully");
+  if (snapshotRecords.length === 0) {
+    return res.status(503).json({ error: "No snapshot weather data available" });
+  }
 
-      // Set the items for each query to sort
-      let sortItems = [];
-      for (let i = 0; i < coords.length; i++) {
-        for (let j = i; j < i + 1; j++) {
-          let point;
-          if (coords.length === 1) {
-            point = rows;
-          } else {
-            point = rows[i];
-          }
-          const opts = { yName: "lat", xName: "lng" };
-          const origin = { lat: coords[j].lat, lng: coords[j].lng };
-          const object = sortByDistance(origin, point, opts)[0];
-          if (object === undefined) {
-            sortItems.push({ "Data not found for this location": origin });
-          } else if (object.distance === undefined) {
-            object.distance = 0;
-            const structured = splitObj(object);
-            sortItems.push(structured);
-          } else {
-            const structured = splitObj(object);
-            sortItems.push(structured);
-          }
-        }
+  const result = coords
+    .map(coord => {
+      const lat = Number(coord.lat);
+      const lng = Number(coord.lng);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+        return { error: "Invalid location coordinates", location: coord };
       }
-      res.json({ result: sortItems });
-    }
-    function splitObj(obj) {
-      try {
-        return {
-          weather: {
-            geohash5: obj.geohash5,
-            geohash3: obj.geohash3,
-            sourceApi: obj.sourceApi,
-            symbol: obj.symbol,
-            fromHour: obj.fromHour,
-            altitude: obj.altitude,
-            fogPercent: obj.fogPercent,
-            pressureHPA: obj.pressureHPA,
-            cloudinessPercent: obj.cloudinessPercent,
-            windDirectionDeg: obj.windDirectionDeg,
-            dewpointTemperatureC: obj.dewpointTemperatureC,
-            windGustMps: obj.windGustMps,
-            humidityPercent: obj.humidityPercent,
-            areaMaxWindSpeedMps: obj.areaMaxWindSpeedMps,
-            windSpeedMps: obj.windSpeedMps,
-            temperatureC: obj.temperatureC,
-            lowCloudsPercent: obj.lowCloudsPercent,
-            mediumCloudsPercent: obj.mediumCloudsPercent,
-            highCloudsPercent: obj.highCloudsPercent,
-            temperatureProbability: obj.temperatureProbability,
-            windProbability: obj.windProbability,
-            updatedTimestamp: obj.updatedTimestamp
-          },
-          location: {
-            lat: obj.lat,
-            lng: obj.lng,
-            fromHour: obj.fromHour,
-            distance: obj.distance
-          }
-        };
-      } catch (e) {
-        console.error(e.message);
+
+      const ts = Number(coord.timestamp || coord.timestam || Date.now() / 1000);
+      const match = findBestMatch(lat, lng, ts);
+      if (!match) {
+        return { error: "Data not found for this location", location: { lat, lng } };
       }
-    }
-  });
+      return toApiResult(match);
+    })
+    .filter(Boolean);
+
+  return res.json({ result });
 });
 
 app.get("/api/weather/license", (req, res) => {

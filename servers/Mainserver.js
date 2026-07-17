@@ -4,6 +4,10 @@ const weatherApi = require("./weatherApi");
 const statsApi = require("./statsApi");
 const pagesServer = require("./pagesServer");
 
+app.get("/healthz", (req, res) => {
+  res.json({ ok: true, service: "hackyourforecast" });
+});
+
 //Amir's server handles weather api
 app.use("/", weatherApi);
 //Meazer's server handles stats api

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hackyourforecast
+    env: node
+    plan: free
+    buildCommand: npm install --no-audit --no-fund
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true

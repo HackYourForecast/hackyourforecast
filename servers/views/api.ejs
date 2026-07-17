@@ -54,7 +54,7 @@
         </div>
         <p> Applications that want to benefit from open Data Meteorological Forecasts can use this service to retrieve data.
             The Entry point is located at
-            <strong>http://www.hackyourforecast.com/api/weather</strong> The data is returned as application/json (JSON). All times
+            <strong>/api/weather</strong> The data is returned as application/json (JSON). All times
             are in in
             <strong>Timestamp</strong> format complying to UTC (Coordinated Universal Time).
         </p>
@@ -63,7 +63,7 @@
  <section id='api-endpoint'>
         <h3>ENDPOINT IS :</h3>
         <p>
-            https://www.hackyourforecast.com/api/weather
+            /api/weather
             <br> To get a forecast, send post request to our API use the body to send the coordination of the location/city ,
             and the hour you need the weather data for (this is optional, if this wasn’t sent in the request body the weather
             data for the current time will be returned) this information should be in a JSON format. To get started with
@@ -77,7 +77,7 @@
         <br>
         <code>
                     <pre> 
-    axios.post(‘http://www.hackyourforecast.com/api/weather’,
+    axios.post('/api/weather',
     {"locations" : [
     
     {
@@ -155,8 +155,8 @@
             HackYourForecast API is published under the following
             <span class='red '> terms and conditions.
                 <br> When using our Data please mention where the source data came from. You can reach these licenses at</span>
-            <a href='https://www.hackyourforecast.com/api/weather/license ' target='_blank '>
-                <br>https://www.hackyourforecast.com/api/weather/license</a>
+            <a href='/api/weather/license' target='_blank '>
+                <br>/api/weather/license</a>
         </p>
     </section>
   

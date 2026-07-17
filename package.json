@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node servers/Mainserver.js",
     "server": "cd servers && nodemon Mainserver.js",
     "client": "cd charts/stats-charts && npm start",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\" "
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/HackYourForecast/hackyourforecast#readme",
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^1.7.9",
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
@@ -35,16 +36,12 @@
     "latlon-geohash": "^1.1.0",
     "moment": "^2.22.2",
     "morgan": "^1.9.1",
-    "mysql": "^2.16.0",
     "ngeohash": "^0.6.0",
     "node-fetch": "^2.2.0",
     "nodemon": "^1.18.5",
     "nodemailer": "^4.6.8",
-    "npm": "^6.4.1",
     "require-dir": "^1.1.0",
-    "sleep": "^5.2.3",
     "sort-by-distance": "^1.0.1",
-    "system-sleep": "^1.3.6",
     "windrose": "^2.1.0",
     "xml2js": "^0.4.19"
   }

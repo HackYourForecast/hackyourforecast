@@ -53,9 +53,10 @@ app.post("/apitester", (req, res) => {
   let lng = req.body.longitude;
   let lat = req.body.latitude;
   let timestamp = req.body.timestamp;
+  const apiBase = `${req.protocol}://${req.get("host")}`;
 
   axios
-    .post("https://www.hackyourforecast.com/api/weather", {
+    .post(`${apiBase}/api/weather`, {
       locations: [{ lat: lat, lng: lng, timestamp: timestamp }]
     })
     .then(res => handleData(res))
