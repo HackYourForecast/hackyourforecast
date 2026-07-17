@@ -59,7 +59,9 @@ npm start
 
 Open:
 
-- App pages: `http://localhost:5000`
+- Chooser homepage: `http://localhost:5000/`
+- Updated frontend (Preact): `http://localhost:5000/updated`
+- Legacy frontend: `http://localhost:5000/legacy`
 - API docs page: `http://localhost:5000/api`
 
 If port `5000` is already used:

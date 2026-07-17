@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackYourForecast</title>
+    <style>
+      :root {
+        --bg: #f6f8fb;
+        --ink: #0f172a;
+        --muted: #475569;
+        --card: #ffffff;
+        --line: #dbe3ee;
+        --accent: #0f766e;
+        --accent-2: #ea580c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(1200px 500px at 20% -10%, #dbeafe 0%, transparent 55%),
+          radial-gradient(1100px 500px at 90% 5%, #ffedd5 0%, transparent 55%),
+          var(--bg);
+      }
+      .shell {
+        max-width: 980px;
+        margin: 0 auto;
+        min-height: 100vh;
+        padding: 48px 20px;
+        display: grid;
+        align-content: center;
+        gap: 24px;
+      }
+      .badge {
+        display: inline-block;
+        width: fit-content;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        font-size: 12px;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(30px, 7vw, 54px);
+        line-height: 1.06;
+      }
+      .sub {
+        margin: 0;
+        max-width: 700px;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: clamp(16px, 2.8vw, 19px);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 16px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+      }
+      .card h2 { margin: 0 0 8px; font-size: 22px; }
+      .card p { margin: 0 0 16px; color: var(--muted); line-height: 1.55; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: 999px;
+        padding: 10px 16px;
+        transition: transform .15s ease, box-shadow .15s ease;
+      }
+      .btn:hover { transform: translateY(-1px); }
+      .btn.updated {
+        background: var(--accent);
+        color: white;
+        box-shadow: 0 6px 18px rgba(15, 118, 110, 0.35);
+      }
+      .btn.legacy {
+        background: #fff;
+        border: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .note {
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .note a { color: var(--accent-2); font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <span class="badge">HackYourForecast</span>
+      <h1>Choose your experience</h1>
+      <p class="sub">
+        Legacy keeps the original graduation-era interface. Updated is the modern lightweight
+        Preact frontend with live API health, stats and weather testing.
+      </p>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Updated App</h2>
+          <p>Modern UI focused on live ingestion status, API usage and quick weather lookup.</p>
+          <a class="btn updated" href="/updated">Open Updated App</a>
+        </article>
+
+        <article class="card">
+          <h2>Legacy App</h2>
+          <p>Original pages and flow from the historical project, preserved for reference.</p>
+          <a class="btn legacy" href="/legacy">Open Legacy App</a>
+        </article>
+      </section>
+
+      <p class="note">
+        API endpoints remain unchanged: <a href="/api/weather">/api/weather</a> and
+        <a href="/api/stats/list">/api/stats/list</a>.
+      </p>
+    </main>
+  </body>
+</html>

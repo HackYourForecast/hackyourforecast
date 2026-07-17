@@ -1,0 +1,155 @@
+:root {
+  --bg: #f8fafc;
+  --ink: #0b1220;
+  --muted: #4b5563;
+  --card: #ffffff;
+  --line: #dbe2ea;
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
+  --warn: #ea580c;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Avenir Next", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(900px 340px at 10% -5%, #dbeafe 0%, transparent 60%),
+    radial-gradient(900px 340px at 90% 0%, #ffedd5 0%, transparent 60%),
+    var(--bg);
+}
+
+a { color: var(--accent); text-decoration: none; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 28px 16px 34px;
+}
+
+.top {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(28px, 6vw, 46px);
+  line-height: 1.07;
+}
+
+.sub {
+  margin: 10px 0 24px;
+  color: var(--muted);
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 8px 22px rgba(2, 8, 23, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.kpi {
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 11px 14px;
+  font: inherit;
+  font-weight: 700;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: var(--accent-soft);
+  color: #115e59;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+pre {
+  margin: 10px 0 0;
+  background: #0f172a;
+  color: #d1fae5;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: auto;
+  max-height: 260px;
+  font-size: 12px;
+}
+
+.err {
+  color: var(--warn);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}
