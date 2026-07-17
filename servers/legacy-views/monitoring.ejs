@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include  ./partials/head.ejs %>
+        <link href='/legacy/public/css/monitoring.css' type='text/css' rel='stylesheet' />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+</head>
+</head>
+
+<body>
+    <header>
+        <nav class='navbar'>
+            <% include  ./partials/navigation.ejs %>
+
+        </nav>
+    </header>
+    <div class='bg'> </div>
+    <div id='select-container'>
+        <h1>Weather statistics based on APIs</h1>
+        <select id='select'>
+   
+        </select>
+    </div>
+    <section>
+
+        <div id='ChartContainer'>
+             <h3>Sum of Temperature and Wind</h3>
+            <canvas class='one' id='apiTempAndWind'></canvas>
+            <h3>Sum of Temperature difference compared with Met.no</h3> 
+            <canvas class='two' id='tempDiff'></canvas>
+            <h3> Sum of Pressure</h3>
+            <canvas class='three' id='apiPressure'></canvas>
+            <h3>Number of Cities</h3>
+            <canvas class='four' id='itemCounts'></canvas>  
+       
+        </div>
+    </section>
+    <footer>
+        <% include  ./partials/footer.ejs %>
+    </footer>
+    <script src='/legacy/script/graphs.js' type='module'></script>
+    <script src='/legacy/script/toogleManu.js' type='text/javascript'></script>
+    <script type="text/javascript" src="/legacy/script/detectScroll.js"></script>
+</body>
+
+</html>

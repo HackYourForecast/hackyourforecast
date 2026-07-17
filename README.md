@@ -64,6 +64,10 @@ Open:
 - Legacy frontend: `http://localhost:5000/legacy`
 - API docs page: `http://localhost:5000/api`
 
+Legacy isolation note:
+
+- Legacy routes render from `servers/legacy-views` so modernization work does not mutate original templates in `servers/views`.
+
 If port `5000` is already used:
 
 ```bash
