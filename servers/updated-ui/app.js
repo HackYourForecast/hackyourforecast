@@ -4,6 +4,23 @@ import htm from "https://esm.sh/htm@3.1.1";
 
 const html = htm.bind(h);
 
+function pick(row, ...keys) {
+  for (const key of keys) {
+    if (row && row[key] !== undefined && row[key] !== null) return row[key];
+  }
+  return null;
+}
+
+function normalizeStatRow(row = {}) {
+  return {
+    runTimeStamp: Number(pick(row, "runTimeStamp", "run_timestamp") || 0),
+    countOfItems: Number(pick(row, "countOfItems", "count_of_items") || 0),
+    sumOfTempC: Number(pick(row, "sumOfTempC", "sum_of_temp_c") || 0),
+    sumOfWindMps: Number(pick(row, "sumOfWindMps", "sum_of_wind_mps") || 0),
+    sumOfPressureHPA: Number(pick(row, "sumOfPressureHPA", "sum_of_pressure_hpa") || 0)
+  };
+}
+
 function Card({ title, children }) {
   return html`<section class="card"><h2>${title}</h2>${children}</section>`;
 }
@@ -53,10 +70,24 @@ function UpdatedApp() {
         fetch("/api/stats/total").then(r => r.json()),
         fetch("/api/stats/").then(r => r.json())
       ]);
+
+      if (!Array.isArray(t)) {
+        throw new Error(pick(t, "response", "error", "message") || "Stats total response is invalid");
+      }
+
+      const normalizedTotal = t.map(normalizeStatRow);
+      const normalizedGrouped = {};
+      if (groupedResp && typeof groupedResp === "object") {
+        Object.keys(groupedResp).forEach(key => {
+          const rows = Array.isArray(groupedResp[key]) ? groupedResp[key] : [];
+          normalizedGrouped[key] = rows.map(normalizeStatRow);
+        });
+      }
+
       setHealth(h);
       setSources(s.sources || []);
-      setTotal(Array.isArray(t) ? t : []);
-      setGrouped(groupedResp && typeof groupedResp === "object" ? groupedResp : {});
+      setTotal(normalizedTotal);
+      setGrouped(normalizedGrouped);
     } catch (e) {
       setErr(e.message || "Failed to load overview data");
     }
@@ -89,6 +120,9 @@ function UpdatedApp() {
         .filter(item => item.latest),
     [sources, grouped]
   );
+
+  const trendLabel =
+    "24 points = latest 24 aggregate samples returned by /api/stats/total (usually hourly buckets).";
 
   async function runWeatherCheck(e) {
     e.preventDefault();
@@ -164,14 +198,17 @@ function UpdatedApp() {
       <section class="grid" style=${{ marginTop: "14px" }}>
         ${html`<section class="card">
           <h2>Temperature trend (24 points)</h2>
+          <p class="kpi">${trendLabel}</p>
           <${Sparkline} values=${trendTemp} color="#0f766e" />
         </section>`}
         ${html`<section class="card">
           <h2>Wind trend (24 points)</h2>
+          <p class="kpi">${trendLabel}</p>
           <${Sparkline} values=${trendWind} color="#1d4ed8" />
         </section>`}
         ${html`<section class="card">
           <h2>Pressure trend (24 points)</h2>
+          <p class="kpi">${trendLabel}</p>
           <${Sparkline} values=${trendPressure} color="#ea580c" />
         </section>`}
       </section>
